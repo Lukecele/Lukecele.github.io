@@ -1,4 +1,4 @@
-const CACHE = "lukecele-research-v19";
+const CACHE = "lukecele-research-v20";
 const CORE = ["/", "/index.html", "/styles.css", "/app.js", "/manifest.webmanifest", "/icon-192.png", "/icon-512.png", "/og-card-luca.png", "/profile-photo.png"];
 
 self.addEventListener("install", (event) => {
