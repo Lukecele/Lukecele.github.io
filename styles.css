@@ -63,6 +63,9 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outlin
 .instagram-player[hidden] { display: none; }
 .instagram-player iframe { display: block; width: 100%; min-height: 520px; border: 0; }
 .instagram-card { order: -1; }
+.main-frame-section { border-block: 1px solid rgba(96, 217, 197, .2); background: linear-gradient(135deg, #10243a, #0b1524); }
+.featured-instagram-card { max-width: 760px; padding: 26px; border: 1px solid rgba(96, 217, 197, .45); border-radius: var(--radius); background: rgba(16, 31, 51, .86); box-shadow: 0 24px 70px rgba(0, 0, 0, .28); }
+.featured-instagram-card .instagram-player { max-width: 620px; }
 @media (min-width: 1000px) {
   .quote-card-last { grid-column: 2; }
 }
