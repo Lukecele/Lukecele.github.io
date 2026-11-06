@@ -62,8 +62,9 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outlin
 .instagram-player { width: 100%; min-height: 520px; margin-top: 18px; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: #000; }
 .instagram-player[hidden] { display: none; }
 .instagram-player iframe { display: block; width: 100%; min-height: 520px; border: 0; }
+.instagram-card { order: -1; }
 @media (min-width: 1000px) {
-  .quote-card:last-child { grid-column: 2; }
+  .quote-card-last { grid-column: 2; }
 }
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) 390px; gap: 70px; align-items: center; min-height: 690px; padding-block: 100px 120px; }
 .eyebrow { margin: 0 0 22px; color: var(--accent); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .72rem; font-weight: 500; letter-spacing: .11em; text-transform: uppercase; }
