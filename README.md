@@ -36,8 +36,9 @@ sistema di supporto alle decisioni cliniche.
 - **Formazione clinica** — MedTerminal Cardio-Toracico.
 - **Lavoro ingegneristico precedente** — Arbitrage Inception e sistemi DeFi
   open source.
-- **Missioni laterali** — easter egg interattivi originali, citazioni video e
-  musica opzionale nella Caverna di Luca.
+- **Missioni laterali** — easter egg interattivi originali, citazioni video
+  italiane da Tolkien, Naruto, Disney, Harry Potter e Dragon Ball, più musica
+  opzionale nella Caverna di Luca.
 
 ## Technical profile
 
