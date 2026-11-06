@@ -42,11 +42,12 @@ sistema di supporto alle decisioni cliniche.
 
 ## Technical profile
 
-This is a dependency-free static site:
+This is a static site with a minimal npm bundle step:
 
 - semantic HTML;
 - custom responsive CSS;
-- small vanilla JavaScript layer;
+- small vanilla JavaScript layer bundled with esbuild;
+- Vercel Analytics through `@vercel/analytics`;
 - Web App Manifest and service worker;
 - Open Graph and Twitter metadata;
 - JSON-LD `Person` structured data;
@@ -60,9 +61,11 @@ automatically.
 
 ## Local preview
 
-No package installation or build step is required:
+Install dependencies and build the browser bundle:
 
 ```bash
+npm install
+npm run build
 python3 -m http.server 4173
 ```
 
@@ -78,8 +81,8 @@ To create your own Vercel deployment:
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Lukecele/lukecele-research)
 
-Use the **Other** preset with no build command and the repository root as the
-output directory.
+Use the **Other** preset with `npm run build` as the build command and the
+repository root as the output directory.
 
 ## Updating the portfolio
 
