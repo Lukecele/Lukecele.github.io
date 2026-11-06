@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#07111f"/>
+  <circle cx="970" cy="120" r="260" fill="none" stroke="#15324a" stroke-width="2"/>
+  <circle cx="970" cy="120" r="180" fill="none" stroke="#1b4a58" stroke-width="2"/>
+  <circle cx="970" cy="120" r="52" fill="#60d9c5"/>
+  <path d="M690 120c120-170 360-170 480 0-120 170-360 170-480 0Z" fill="none" stroke="#77a9ff" stroke-width="4"/>
+  <text x="88" y="115" fill="#60d9c5" font-family="monospace" font-size="24" letter-spacing="4">MEDICINE × BIOINFORMATICS × OPEN SCIENCE</text>
+  <text x="88" y="235" fill="#f5f8fc" font-family="Arial, sans-serif" font-size="72" font-weight="700">Luca Celebrano</text>
+  <text x="88" y="310" fill="#9aa8bb" font-family="Arial, sans-serif" font-size="32">Computational oncology and spatial multi-omics</text>
+  <text x="88" y="405" fill="#77a9ff" font-family="monospace" font-size="24">reaction–diffusion · digital pathology · reproducible software</text>
+  <text x="88" y="550" fill="#9aa8bb" font-family="Arial, sans-serif" font-size="22">Medical student · Bioinformatics thesis student at TIGEM</text>
+</svg>
