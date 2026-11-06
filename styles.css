@@ -25,6 +25,7 @@ body {
 }
 a { color: inherit; }
 button, a { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .shell { width: min(1160px, calc(100% - 48px)); margin-inline: auto; }
 .skip-link {
   position: absolute; left: 16px; top: -50px; z-index: 20;
@@ -58,6 +59,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .quote-video { width: 100%; aspect-ratio: 16 / 9; margin-top: 18px; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: #000; }
 .quote-video[hidden] { display: none; }
 .quote-video iframe { width: 100%; height: 100%; border: 0; }
+@media (min-width: 1000px) {
+  .quote-card:last-child { grid-column: 2; }
+}
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) 390px; gap: 70px; align-items: center; min-height: 690px; padding-block: 100px 120px; }
 .eyebrow { margin: 0 0 22px; color: var(--accent); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .72rem; font-weight: 500; letter-spacing: .11em; text-transform: uppercase; }
 .status-dot { display: inline-block; width: 7px; height: 7px; margin-right: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px rgba(96, 217, 197, .13); }
@@ -119,7 +123,7 @@ h3 { margin-bottom: 12px; font-size: clamp(1.25rem, 2vw, 1.7rem); line-height: 1
 .system-card { position: relative; display: flex; min-height: 230px; flex-direction: column; padding: 26px; color: var(--ink); background: #102033; text-decoration: none; transition: background .2s, transform .2s; }
 .system-card:hover { z-index: 1; background: #16374a; transform: translateY(-4px); }
 .system-card-large { grid-column: span 2; background: #142c42; }
-.system-index { margin-bottom: auto; color: #6a7c8e; font-family: "DM Mono", monospace; font-size: .75rem; }
+.system-index { margin-bottom: auto; color: #6a7c8e; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .75rem; }
 .system-title { margin: 18px 0 8px; font-size: 1.23rem; font-weight: 800; letter-spacing: -.035em; }
 .system-description { max-width: 390px; color: var(--muted); font-size: .83rem; }
 .system-arrow { position: absolute; top: 25px; right: 25px; color: var(--accent); font-size: 1.3rem; }
@@ -127,7 +131,7 @@ h3 { margin-bottom: 12px; font-size: clamp(1.25rem, 2vw, 1.7rem); line-height: 1
 .lab-card { display: flex; min-height: 255px; flex-direction: column; padding: 28px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface-soft); text-decoration: none; transition: transform .2s, border-color .2s; }
 .lab-card:hover { border-color: var(--accent); transform: translateY(-4px); }
 .lab-card-primary { background: linear-gradient(145deg, #12394b, #102037); }
-.lab-kicker { margin-bottom: auto; color: var(--accent); font-family: "DM Mono", monospace; font-size: .68rem; text-transform: uppercase; }
+.lab-kicker { margin-bottom: auto; color: var(--accent); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .68rem; text-transform: uppercase; }
 .lab-card strong { display: block; margin: 18px 0 8px; font-size: 1.35rem; letter-spacing: -.035em; }
 .lab-card > span:not(.lab-kicker):not(.lab-link) { color: var(--muted); font-size: .82rem; }
 .lab-link { margin-top: 22px; color: var(--accent); font-size: .78rem; font-weight: 800; }
