@@ -67,7 +67,8 @@ const mottos = {
   data: "The dataset is vast. The README is your map.",
   wizard: "No wizardry required: just a clean environment.",
   training: "The validation suite has entered its training arc.",
-  focus: "Charge the analysis. Check the assumptions twice."
+  focus: "Charge the analysis. Check the assumptions twice.",
+  power: "Power level: reproducible."
 };
 const motto = document.querySelector("[data-motto]");
 

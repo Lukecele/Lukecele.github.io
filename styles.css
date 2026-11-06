@@ -85,6 +85,9 @@ h3 { margin-bottom: 12px; font-size: clamp(1.25rem, 2vw, 1.7rem); line-height: 1
 .quest-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
 .quest-card { display: flex; min-height: 150px; flex-direction: column; align-items: flex-start; padding: 22px; border: 1px solid var(--line); border-radius: 17px; color: var(--ink); background: rgba(255,255,255,.035); text-align: left; cursor: pointer; font: inherit; transition: border-color .2s, transform .2s, background .2s; }
 .quest-card:hover { border-color: var(--accent); background: rgba(96,217,197,.08); transform: translateY(-3px); }
+.quest-card-power { border-color: rgba(255, 202, 80, .35); }
+.quest-card-power:hover { border-color: #ffca50; background: rgba(255, 202, 80, .08); }
+.quest-card-power .quest-icon { color: #ffca50; }
 .quest-icon { margin-bottom: auto; color: var(--accent); font-size: 1.25rem; }
 .quest-card strong { margin-top: 14px; font-size: .9rem; }
 .quest-card span:last-child { margin-top: 5px; color: var(--muted); font-size: .72rem; line-height: 1.45; }
