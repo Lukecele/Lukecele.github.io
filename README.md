@@ -1,6 +1,6 @@
 <div align="center">
 
-# Luca Celebrano Research
+# Caverna di Luca
 
 **Medicina · Bioinformatica · Oncologia computazionale**
 
@@ -37,7 +37,7 @@ sistema di supporto alle decisioni cliniche.
 - **Lavoro ingegneristico precedente** — Arbitrage Inception e sistemi DeFi
   open source.
 - **Missioni laterali** — easter egg interattivi originali, citazioni video e
-  musica opzionale.
+  musica opzionale nella Caverna di Luca.
 
 ## Technical profile
 
