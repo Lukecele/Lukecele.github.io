@@ -36,16 +36,38 @@ youtubeButton?.addEventListener("click", () => {
   }
   const hidden = youtubePlayer.hidden;
   youtubePlayer.hidden = !hidden;
-  youtubeButton.textContent = hidden ? "Hide YouTube player" : "▶ Hey Brother · YouTube";
+  youtubeButton.textContent = hidden ? "Nascondi player YouTube" : "▶ Hey Brother · YouTube";
+});
+
+document.querySelectorAll("[data-quote-video]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const player = button.parentElement?.querySelector("[data-quote-player]");
+    const videoId = button.dataset.quoteVideo;
+    if (!player || !videoId) return;
+    const isLoaded = Boolean(player.querySelector("iframe"));
+    if (!isLoaded) {
+      const iframe = document.createElement("iframe");
+      iframe.title = "Scena italiana della citazione";
+      iframe.loading = "lazy";
+      iframe.allow = "autoplay; encrypted-media; picture-in-picture";
+      iframe.allowFullscreen = true;
+      iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1&playsinline=1`;
+      player.append(iframe);
+    }
+    const hidden = player.hidden;
+    player.hidden = !hidden;
+    button.setAttribute("aria-expanded", String(hidden));
+    button.textContent = hidden ? "Nascondi la scena" : "▶ Guarda la scena italiana";
+  });
 });
 
 const mottos = {
-  default: "A good scientist carries a backup seed.",
-  data: "The dataset is vast. The README is your map.",
-  wizard: "No wizardry required: just a clean environment.",
-  training: "The validation suite has entered its training arc.",
-  focus: "Charge the analysis. Check the assumptions twice.",
-  power: "Power level: reproducible."
+  default: "Un buon ricercatore porta sempre un seed di riserva.",
+  data: "Il dataset è vasto. Il README è la tua mappa.",
+  wizard: "Niente magia: solo un ambiente pulito.",
+  training: "La suite di validazione è entrata nel suo training arc.",
+  focus: "Carica l'analisi. Controlla due volte le ipotesi.",
+  power: "Livello di potenza: riproducibile."
 };
 const motto = document.querySelector("[data-motto]");
 

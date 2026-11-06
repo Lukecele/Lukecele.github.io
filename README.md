@@ -2,42 +2,42 @@
 
 # Luca Celebrano Research
 
-**Medicine · Bioinformatics · Computational Oncology**
+**Medicina · Bioinformatica · Oncologia computazionale**
 
 [![Live on Vercel](https://img.shields.io/badge/Live-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://lukecele-research.vercel.app/)
 [![PWA](https://img.shields.io/badge/PWA-Installable-60d9c5?style=for-the-badge)](https://lukecele-research.vercel.app/)
 [![GitHub](https://img.shields.io/badge/Source-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/Lukecele/lukecele-research)
 
 <p>
-  <a href="https://lukecele-research.vercel.app/">Open the live research portfolio ↗</a>
+  <a href="https://lukecele-research.vercel.app/">Apri il portfolio di ricerca ↗</a>
 </p>
 
 </div>
 
-## What this is
+## Cos'è
 
-A fast, static research portfolio for **Luca Celebrano**, medical student and
-bioinformatics thesis student at **TIGEM**. It presents current manuscripts,
-open-source computational oncology systems, spatial-omics tools, interactive
-Hugging Face resources and previous Web3 engineering work.
+Un portfolio statico e veloce per **Luca Celebrano**, studente di medicina e
+tesi in bioinformatica al **TIGEM**. Presenta manoscritti attuali, sistemi open
+source di oncologia computazionale, strumenti di spatial omics, risorse
+interattive Hugging Face e il precedente lavoro di ingegneria Web3.
 
-The portfolio is intentionally separate from any thesis codebase or
-institutional analysis repository. It is a personal index of research and
-software, not a clinical decision system.
+Il portfolio è volutamente separato da qualsiasi codebase di tesi o repository
+istituzionale di analisi. È un indice personale di ricerca e software, non un
+sistema di supporto alle decisioni cliniche.
 
-## Sections
+## Sezioni
 
-- **Research & publications** — the Scientific Reports manuscript and the
-  Research Square translational preprint.
-- **Research systems** — Spatial Continuum Oncology, InSituGame, InSituVision-AI,
-  Spatial Oncology Master and related studies.
-- **Interactive lab** — Hugging Face digital twins, simulators and public
-  research datasets.
-- **Clinical education** — MedTerminal Cardio-Toracico.
-- **Earlier engineering work** — Arbitrage Inception and open-source DeFi
-  systems.
-- **Side quests** — small, original interactive easter eggs and optional
-  ambient audio.
+- **Ricerca e pubblicazioni** — il manoscritto per Scientific Reports e il
+  preprint traslazionale su Research Square.
+- **Sistemi di ricerca** — Spatial Continuum Oncology, InSituGame,
+  InSituVision-AI, Spatial Oncology Master e studi collegati.
+- **Laboratorio interattivo** — digital twin, simulatori e dataset pubblici
+  di ricerca su Hugging Face.
+- **Formazione clinica** — MedTerminal Cardio-Toracico.
+- **Lavoro ingegneristico precedente** — Arbitrage Inception e sistemi DeFi
+  open source.
+- **Missioni laterali** — easter egg interattivi originali, citazioni video e
+  musica opzionale.
 
 ## Technical profile
 

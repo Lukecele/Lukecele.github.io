@@ -49,6 +49,15 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .youtube-player { flex-basis: 100%; max-width: 520px; aspect-ratio: 16 / 9; margin-top: 8px; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: #000; }
 .youtube-player[hidden] { display: none; }
 .youtube-player iframe { width: 100%; height: 100%; border: 0; }
+.quote-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+.quote-card { padding: 26px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface-soft); box-shadow: var(--shadow); }
+.quote-card blockquote { margin: 24px 0 14px; color: var(--ink); font-size: clamp(1.2rem, 2vw, 1.65rem); line-height: 1.3; letter-spacing: -.025em; }
+.quote-caption { color: var(--muted); font-size: .84rem; }
+.quote-video-button { margin-top: 12px; border: 1px solid var(--line); border-radius: 999px; padding: 9px 13px; color: var(--accent); background: transparent; font: inherit; font-size: .75rem; font-weight: 800; cursor: pointer; }
+.quote-video-button:hover { border-color: var(--accent); color: var(--ink); }
+.quote-video { width: 100%; aspect-ratio: 16 / 9; margin-top: 18px; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: #000; }
+.quote-video[hidden] { display: none; }
+.quote-video iframe { width: 100%; height: 100%; border: 0; }
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) 390px; gap: 70px; align-items: center; min-height: 690px; padding-block: 100px 120px; }
 .eyebrow { margin: 0 0 22px; color: var(--accent); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .72rem; font-weight: 500; letter-spacing: .11em; text-transform: uppercase; }
 .status-dot { display: inline-block; width: 7px; height: 7px; margin-right: 8px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px rgba(96, 217, 197, .13); }
