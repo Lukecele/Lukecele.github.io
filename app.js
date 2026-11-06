@@ -69,6 +69,28 @@ document.querySelectorAll("[data-quote-video]").forEach((button) => {
   });
 });
 
+document.querySelectorAll("[data-instagram-video]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const player = button.parentElement?.querySelector("[data-instagram-player]");
+    const reelId = button.dataset.instagramVideo;
+    if (!player || !reelId) return;
+    const isLoaded = Boolean(player.querySelector("iframe"));
+    if (!isLoaded) {
+      const iframe = document.createElement("iframe");
+      iframe.title = "Frame Instagram dalla Caverna di Luca";
+      iframe.loading = "lazy";
+      iframe.allow = "autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share";
+      iframe.allowFullscreen = true;
+      iframe.src = `https://www.instagram.com/reel/${reelId}/embed/`;
+      player.append(iframe);
+    }
+    const hidden = player.hidden;
+    player.hidden = !hidden;
+    button.setAttribute("aria-expanded", String(hidden));
+    button.textContent = hidden ? "Nascondi il frame Instagram" : "▣ Apri il frame Instagram";
+  });
+});
+
 const mottos = {
   default: "Un buon ricercatore porta sempre un seed di riserva.",
   data: "Il dataset è vasto. Il README è la tua mappa.",
