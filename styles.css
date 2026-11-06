@@ -156,9 +156,9 @@ h3 { margin-bottom: 12px; font-size: clamp(1.25rem, 2vw, 1.7rem); line-height: 1
 }
 @media (max-width: 620px) {
   .shell { width: min(100% - 32px, 1160px); }
-  .site-header { min-height: 64px; padding-inline: 16px; }
+  .site-header { min-height: 64px; flex-wrap: wrap; padding-inline: 16px; }
   .menu-toggle { display: block; }
-  .site-nav { position: absolute; top: 63px; right: 16px; left: 16px; display: none; flex-direction: column; gap: 0; padding: 8px; border: 1px solid var(--line); border-radius: 14px; background: #0d1b2b; box-shadow: var(--shadow); }
+  .site-nav { position: static; flex-basis: 100%; display: none; flex-direction: column; gap: 0; margin: 8px 0 12px; padding: 8px; border: 1px solid var(--line); border-radius: 14px; background: #0d1b2b; box-shadow: var(--shadow); }
   .site-nav[data-open="true"] { display: flex; }
   .site-nav a { padding: 12px; }
   h1 { font-size: clamp(2.65rem, 14vw, 4rem); }

@@ -14,6 +14,14 @@ if (menuToggle && siteNav) {
       siteNav.dataset.open = "false";
     }
   });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && siteNav.dataset.open === "true") {
+      menuToggle.setAttribute("aria-expanded", "false");
+      siteNav.dataset.open = "false";
+      menuToggle.focus();
+    }
+  });
 }
 
 const year = document.querySelector("#year");
