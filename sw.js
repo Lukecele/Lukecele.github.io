@@ -1,5 +1,5 @@
-const CACHE = "lukecele-research-v26";
-const CORE = ["/", "/index.html", "/styles.css", "/app.bundle.js", "/manifest.webmanifest", "/icon-192.png", "/icon-512.png", "/og-card-luca.png", "/profile-photo.png"];
+const CACHE = "lukecele-research-v27";
+const CORE = ["/", "/index.html", "/privacy.html", "/styles.css", "/app.bundle.js", "/manifest.webmanifest", "/icon-192.png", "/icon-512.png", "/og-card-luca.png", "/profile-photo.png"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(CORE)));
