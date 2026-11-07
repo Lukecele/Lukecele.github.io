@@ -15,7 +15,7 @@
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/icon-192.png" />
-    <link rel="stylesheet" href="/styles.css?v=10" />
+    <link rel="stylesheet" href="/styles.css?v=11" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://lukecele-research.vercel.app/" />
     <meta property="og:title" content="Caverna di Luca | Luca Celebrano" />
@@ -88,10 +88,10 @@
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav id="site-nav" class="site-nav" aria-label="Navigazione principale">
+        <a href="#lab">Laboratorio 3D</a>
         <a href="#research">Ricerca</a>
         <a href="#systems">Sistemi</a>
-        <a href="#lab">Laboratorio</a>
-        <a href="#quotes">Citazioni</a>
+        <a href="#caverna">La Caverna</a>
         <a href="#contact">Contatti</a>
       </nav>
     </header>
@@ -102,21 +102,28 @@
           <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Medicina × computazione × scienza aperta</p>
           <h1>Creo strumenti per capire <em>dove</em> succede la biologia del cancro.</h1>
           <p class="hero-lede">Sono uno studente di medicina e sto svolgendo una tesi in bioinformatica al TIGEM. Lavoro in autonomia su oncologia computazionale, spatial multi-omics e software di ricerca riproducibile.</p>
+          
+          <div>
+            <a href="https://github.com/seandavi/awesome-single-cell" target="_blank" rel="noopener noreferrer" class="hero-authority-badge" data-track="hero_badge_awesome">
+              <span>⭐</span> Spatial Architecture inclusa in awesome-single-cell ↗
+            </a>
+          </div>
+
           <div class="hero-feature-pills" aria-label="Scorciatoie rapide alle sezioni">
-            <a href="https://huggingface.co/spaces/spatial-continuum-lab/tumor-cord-sanctuary-3d" target="_blank" rel="noopener noreferrer" class="hero-pill" data-track="pill_digital_twin_3d">⚡ Digital twin 3D ↗</a>
-            <a href="#research" class="hero-pill" data-track="pill_reaction_diffusion">◈ Solver reazione-diffusione ↓</a>
-            <a href="#systems" class="hero-pill" data-track="pill_open_source">✦ Codice aperto & Sistemi ↓</a>
+            <a href="#lab" class="hero-pill" data-track="hero_pill_lab">⚡ Digital twin 3D & Simulatori ↓</a>
+            <a href="#research" class="hero-pill" data-track="hero_pill_research">🔬 Preprint & Pubblicazioni ↓</a>
+            <a href="#systems" class="hero-pill" data-track="hero_pill_systems">◈ Sistemi & bio.tools ↓</a>
           </div>
           <div class="hero-actions">
-            <a class="button button-primary" href="#research" data-track="hero_explore_research">✦ Scopri la ricerca & i modelli 3D <span aria-hidden="true">↓</span></a>
-            <a class="button button-quiet" href="https://github.com/Lukecele" rel="me noopener" target="_blank" data-track="hero_github">Apri GitHub <span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" href="#lab" data-track="hero_cta_lab">✦ Esplora il Lab 3D & i Simulatori <span aria-hidden="true">↓</span></a>
+            <a class="button button-quiet" href="#research" data-track="hero_cta_research">Preprint Scientifici <span aria-hidden="true">↓</span></a>
+            <a class="button button-quiet" href="https://github.com/Lukecele" rel="me noopener" target="_blank" data-track="hero_github">GitHub @Lukecele <span aria-hidden="true">↗</span></a>
           </div>
           <div class="quick-links" aria-label="Link del profilo">
             <a href="https://orcid.org/0009-0007-0931-3555" rel="me noopener" target="_blank" data-track="hero_orcid">ORCID</a>
             <a href="https://www.linkedin.com/in/luca-celebrano/" rel="me noopener" target="_blank" data-track="hero_linkedin">LinkedIn</a>
             <a href="https://huggingface.co/spatial-continuum-lab" rel="me noopener" target="_blank" data-track="hero_huggingface">Lab Hugging Face</a>
           </div>
-          <button class="quest-button" type="button" data-quest data-track="hero_side_quest">✦ Sblocca una side quest di ricerca</button>
           <div class="music-dock">
             <button class="sound-toggle" type="button" data-youtube data-track="hero_youtube_music">▶ Hey Brother · YouTube</button>
             <span>Pausa musicale opzionale · clicca per caricare</span>
@@ -136,286 +143,281 @@
         </div>
       </section>
 
-      <section id="main-frame" class="section main-frame-section">
+      <!-- 01 / LABORATORIO COMPUTAZIONALE & DIGITAL TWIN 3D -->
+      <section id="lab" class="section shell">
+        <div class="section-heading">
+          <p class="eyebrow">01 / Laboratorio computazionale & 3D</p>
+          <h2>I modelli in 3D: esplorabili in browser.</h2>
+          <p class="section-intro">La biologia del cancro ha bisogno di modelli spaziali che si possano ispezionare direttamente. Esplora i digital twin WebGL e i simulatori a 60 FPS che pubblico su Hugging Face e GitHub.</p>
+        </div>
+        <div class="lab-grid">
+          <a class="lab-card lab-card-primary" href="https://huggingface.co/spaces/spatial-continuum-lab/tumor-cord-sanctuary-3d" target="_blank" rel="noopener noreferrer" data-track="lab_huggingface_3d">
+            <span class="lab-kicker">Hugging Face Space · WebGL 60 FPS</span>
+            <strong>3D Tumor Sanctuary</strong>
+            <span>Digital twin interattivo della reazione-diffusione perivascolare e dei santuari di resistenza farmacologica.</span>
+            <span class="lab-link">Apri lo Space 3D ↗</span>
+          </a>
+          <a class="lab-card" href="https://lukecele.github.io/spatial-continuum-oncology/simulator.html" target="_blank" rel="noopener noreferrer" data-track="lab_simulator_live">
+            <span class="lab-kicker">Live simulator</span>
+            <strong>Spatial Oncology Simulator</strong>
+            <span>Solver numerico interattivo: visualizza in tempo reale i gradienti di diffusione Bessel K₀ e il dilemma della sospensione post-ADAURA.</span>
+            <span class="lab-link">Avvia il simulatore ↗</span>
+          </a>
+          <a class="lab-card" href="https://huggingface.co/datasets/spatial-continuum-lab/mskcc-lung-adenocarcinoma-spatial-cohort" target="_blank" rel="noopener noreferrer" data-track="lab_mskcc_dataset">
+            <span class="lab-kicker">Hugging Face Dataset</span>
+            <strong>MSKCC LUAD cohort</strong>
+            <span>Dati clinico-molecolari e spaziali curati per la riproducibilità totale dei modelli computazionali.</span>
+            <span class="lab-link">Ispeziona il dataset ↗</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 02 / RICERCA SCIENTIFICA ATTUALE -->
+      <section id="research" class="section section-muted">
         <div class="shell">
           <div class="section-heading">
-            <p class="eyebrow">01 / Frame principale</p>
-            <h2>Io sono leggenda.</h2>
-            <p class="section-intro">Il frame manifesto della Caverna di Luca, prima della ricerca e di tutto il resto. Il reel Instagram si apre solo quando scegli di guardarlo.</p>
+            <p class="eyebrow">02 / Ricerca attuale</p>
+            <h2>Due percorsi di ricerca connessi, un solo workflow riproducibile.</h2>
+            <p class="section-intro">Dalla biofisica matematica dei santuari farmacologici all'analisi traslazionale computazionale dei fenotipi rari.</p>
           </div>
-          <article class="featured-instagram-card">
-            <div class="card-topline"><span>Caverna di Luca · Frame principale</span><span class="pill">YouTube</span></div>
+          <div class="research-grid">
+            <article class="research-card featured-card">
+              <div class="card-topline"><span>Scientific Reports · Nature Portfolio</span><span class="pill">Editor assegnato</span></div>
+              <h3>The Spatial-Genomic Oncology Continuum</h3>
+              <p>Una teoria biofisica di reazione-diffusione dei santuari farmacologici, il dilemma della sospensione post-ADAURA e il protocollo dello studio clinico SG-ADAURA.</p>
+              <div class="card-links">
+                <a href="https://github.com/Lukecele/spatial-continuum-oncology" target="_blank" rel="noopener noreferrer" data-track="research_spatial_continuum_repo">Repository ↗</a>
+                <a href="https://bio.tools/spatial-continuum-oncology" target="_blank" rel="noopener noreferrer" data-track="research_spatial_continuum_biotools">bio.tools ↗</a>
+                <a href="https://doi.org/10.21203/rs.3.rs-11530312/v1" target="_blank" rel="noopener noreferrer" data-track="research_spatial_continuum_doi">DOI del preprint ↗</a>
+              </div>
+            </article>
+            <article class="research-card">
+              <div class="card-topline"><span>Research Square</span><span class="pill pill-green">Preprint pubblicato</span></div>
+              <h3>Estensioni traslazionali & GIST Profile</h3>
+              <p>Un pacchetto di ricerca collegato alle evidenze, con score esplorativo del fenotipo GIST, protocollo di studio, registro dei dati candidati e strumenti CRI per audit di ricerca.</p>
+              <div class="card-links">
+                <a href="https://github.com/Lukecele/spatial-continuum-translational" target="_blank" rel="noopener noreferrer" data-track="research_translational_repo">Repository ↗</a>
+                <a href="https://bio.tools/spatial-continuum-translational" target="_blank" rel="noopener noreferrer" data-track="research_translational_biotools">bio.tools ↗</a>
+                <a href="https://doi.org/10.21203/rs.3.rs-11633521/v1" target="_blank" rel="noopener noreferrer" data-track="research_translational_doi">DOI del preprint ↗</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 / SISTEMI DI RICERCA APERTI -->
+      <section id="systems" class="section shell">
+        <div class="section-heading">
+          <p class="eyebrow">03 / Sistemi e software di ricerca</p>
+          <h2>Strumenti, modelli e saggi aperti.</h2>
+          <p class="section-intro">Pacchetti open source, repository indicizzati su bio.tools e inclusi nelle directory internazionali di riferimento.</p>
+        </div>
+        <div class="system-grid">
+          <a class="system-card system-card-large" href="https://github.com/Lukecele/spatial-continuum-oncology" target="_blank" rel="noopener noreferrer" data-track="system_spatial_continuum">
+            <span class="system-index">01</span>
+            <span class="system-title">Spatial Continuum Oncology</span>
+            <span class="system-description">Trasporto a reazione-diffusione, Bessel K₀ modificata, CRI al letto del paziente e digital twin tumorale a 60 FPS.</span>
+            <span class="system-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="system-card" href="https://github.com/Lukecele/spatial-architecture-osimertinib" target="_blank" rel="noopener noreferrer" data-track="system_spatial_architecture">
+            <span class="system-badge">⭐ Curato in awesome-single-cell</span>
+            <span class="system-index">02</span>
+            <span class="system-title">Spatial Architecture</span>
+            <span class="system-description">Analisi spaziale Visium HD dei limiti di trasporto subcellulare nel NSCLC EGFR-mutato. Inserito ufficialmente in awesome-single-cell.</span>
+            <span class="system-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="system-card" href="https://github.com/Lukecele/spatial-game-assay" target="_blank" rel="noopener noreferrer" data-track="system_insitugame">
+            <span class="system-index">03</span>
+            <span class="system-title">InSituGame</span>
+            <span class="system-description">Saggio di gioco evolutivo per matrici di payoff subclonali spaziali e ricerca sulla terapia adattiva.</span>
+            <span class="system-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="system-card" href="https://github.com/Lukecele/spatial-he-vision-study4" target="_blank" rel="noopener noreferrer" data-track="system_insituvision">
+            <span class="system-index">04</span>
+            <span class="system-title">InSituVision-AI</span>
+            <span class="system-description">Ricerca di patologia digitale con Attention-MIL su immagini whole-slide H&E di routine.</span>
+            <span class="system-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="system-card" href="https://github.com/Lukecele/spatial-oncology-master" target="_blank" rel="noopener noreferrer" data-track="system_spatial_master">
+            <span class="system-index">05</span>
+            <span class="system-title">Spatial Oncology Master</span>
+            <span class="system-description">Solver di trasporto con Bessel K₀ cilindrica e validazione su coorte clinica.</span>
+            <span class="system-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="system-card" href="https://cardio-thoracic-medterminal.vercel.app/" target="_blank" rel="noopener noreferrer" data-track="system_medterminal">
+            <span class="system-index">06</span>
+            <span class="system-title">MedTerminal</span>
+            <span class="system-description">Anatomia 3D interattiva, simulazione ECG e active recall per la formazione medica.</span>
+            <span class="system-quote">“Non vede dove il cuore lo porta quando il sole è calato e la luna è morta.”</span>
+            <span class="system-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- 04 / LA CAVERNA: MANIFESTO, CITAZIONI & LORE -->
+      <section id="caverna" class="section section-dark">
+        <div class="shell">
+          <div class="section-heading">
+            <p class="eyebrow">04 / La Caverna di Luca</p>
+            <h2>Scienza seria. Lore, cinema e radici.</h2>
+            <p class="section-intro">Il lavoro scientifico è rigoroso, ma la Caverna non è un rettangolo beige. Qui convivono il manifesto filosofico, le scene che ispirano il cammino e le radici prima della medicina.</p>
+          </div>
+
+          <article class="featured-instagram-card" style="margin-bottom: 48px;">
+            <div class="card-topline"><span>Il Manifesto della Caverna</span><span class="pill">YouTube</span></div>
+            <h3 style="margin-bottom: 8px; font-size: 1.45rem;">Io sono leggenda.</h3>
+            <p class="section-intro" style="margin-bottom: 18px;">La determinazione ostinata del ricercatore: continuare a testare, iterare e costruire anche quando tutto sembra fermo.</p>
             <button class="quote-video-button" type="button" data-quote-video="0tg97RAcx-Q" aria-expanded="false" data-track="main_frame_legend">▶ Guarda la scena su YouTube</button>
             <div class="quote-video" data-quote-player hidden></div>
           </article>
-        </div>
-      </section>
 
-      <section id="research" class="section shell">
-        <div class="section-heading">
-          <p class="eyebrow">01 / Ricerca attuale</p>
-          <h2>Due percorsi di ricerca connessi, un solo workflow riproducibile.</h2>
-        </div>
-        <div class="research-grid">
-          <article class="research-card featured-card">
-            <div class="card-topline"><span>Scientific Reports</span><span class="pill">Editor assegnato</span></div>
-            <h3>The Spatial-Genomic Oncology Continuum</h3>
-            <p>Una teoria biofisica di reazione-diffusione dei santuari farmacologici, il dilemma della sospensione post-ADAURA e il protocollo dello studio clinico SG-ADAURA.</p>
-            <div class="card-links">
-            <div class="card-links">
-              <a href="https://github.com/Lukecele/spatial-continuum-oncology" data-track="research_spatial_continuum_repo">Repository ↗</a>
-              <a href="https://bio.tools/spatial-continuum-oncology" data-track="research_spatial_continuum_biotools">bio.tools ↗</a>
-              <a href="https://doi.org/10.21203/rs.3.rs-11530312/v1" data-track="research_spatial_continuum_doi">DOI del preprint ↗</a>
+          <div class="quest-panel" style="margin-bottom: 56px;">
+            <div>
+              <p class="eyebrow">Side quest</p>
+              <h3 style="font-size: 1.6rem; margin-bottom: 12px;">Sblocca una missione</h3>
+              <p class="section-intro">Clicca su una quest per caricare un motto di ricerca riproducibile.</p>
             </div>
-          </article>
-          <article class="research-card">
-            <div class="card-topline"><span>Research Square</span><span class="pill pill-green">Pubblicato</span></div>
-            <h3>Estensioni traslazionali</h3>
-            <p>Un pacchetto di ricerca collegato alle evidenze, con score esplorativo del fenotipo GIST, protocollo di studio, registro dei dati candidati e strumenti CRI per audit di ricerca.</p>
-            <div class="card-links">
-              <a href="https://github.com/Lukecele/spatial-continuum-translational" data-track="research_translational_repo">Repository ↗</a>
-              <a href="https://bio.tools/spatial-continuum-translational" data-track="research_translational_biotools">bio.tools ↗</a>
-              <a href="https://doi.org/10.21203/rs.3.rs-11633521/v1" data-track="research_translational_doi">DOI del preprint ↗</a>
+            <div class="quest-grid">
+              <button class="quest-card" type="button" data-quest-card="data">
+                <span class="quest-icon">◈</span>
+                <strong>Compagnia dei dati puliti</strong>
+                <span>Una pipeline, molti dataset, zero CSV misteriosi.</span>
+              </button>
+              <button class="quest-card" type="button" data-quest-card="wizard">
+                <span class="quest-icon">✦</span>
+                <strong>Modalità mago: seed deterministici</strong>
+                <span>Niente incantesimi: solo ambienti riproducibili.</span>
+              </button>
+              <button class="quest-card" type="button" data-quest-card="training">
+                <span class="quest-icon">⚡</span>
+                <strong>Validazione da eroe</strong>
+                <span>Più test, meno mostri nascosti in produzione.</span>
+              </button>
+              <button class="quest-card" type="button" data-quest-card="focus">
+                <span class="quest-icon">☄</span>
+                <strong>Protocollo concentrazione anime</strong>
+                <span>Carica l'analisi, poi controlla due volte le ipotesi.</span>
+              </button>
+              <button class="quest-card quest-card-power" type="button" data-quest-card="power">
+                <span class="quest-icon">✦</span>
+                <strong>Modalità validazione power-up</strong>
+                <span>Aumenta la suite di test, non l'intervallo di confidenza.</span>
+              </button>
             </div>
+            <p class="quest-motto" data-motto aria-live="polite">Un buon ricercatore porta sempre un seed di riserva.</p>
+          </div>
+
+          <div class="compact-section" style="margin-bottom: 56px; padding: 28px; border: 1px solid var(--line); border-radius: var(--radius); background: rgba(255,255,255,.02);">
+            <div>
+              <p class="eyebrow" style="margin-bottom: 8px;">Radici ingegneristiche</p>
+              <h3 style="font-size: 1.45rem; margin-bottom: 10px;">Prima di medicina, costruivo in Web3.</h3>
             </div>
-          </article>
+            <p>In passato ho fondato <a href="https://github.com/arbincept" target="_blank" rel="noopener noreferrer">Arbitrage Inception</a>, un'organizzazione open source di ingegneria DeFi. Quell'esperienza in progettazione di protocolli, security research e sistemi ad alta affidabilità oggi alimenta il mio lavoro sul software scientifico.</p>
+          </div>
+
+          <div class="section-heading" style="margin-bottom: 24px;">
+            <p class="eyebrow">Citazioni e cinema</p>
+            <h3 style="font-size: 1.6rem;">Le scene che restano.</h3>
+          </div>
+          <div class="quote-grid">
+            <article class="quote-card">
+              <div class="card-topline"><span>Il Signore degli Anelli · Le due torri</span><span class="pill">Italiano</span></div>
+              <blockquote>“C'è del buono in questo mondo, padron Frodo. È giusto combattere per questo.”</blockquote>
+              <p class="quote-caption">Quando tutto sembra perso, Sam ricorda perché vale la pena andare avanti.</p>
+              <button class="quote-video-button" type="button" data-quote-video="KknHpZsdqYE" aria-expanded="false">▶ Guarda la scena italiana</button>
+              <div class="quote-video" data-quote-player hidden></div>
+            </article>
+            <article class="quote-card">
+              <div class="card-topline"><span>Il Signore degli Anelli · Il ritorno del re</span><span class="pill">Italiano</span></div>
+              <blockquote>“Figli di Gondor, di Rohan, fratelli miei! [...] Ma non è questo il giorno! Quest'oggi combattiamo. Uomini dell'Ovest!”</blockquote>
+              <p class="quote-caption">Aragorn davanti al Cancello Nero: il coraggio non è non avere paura, è restare insieme.</p>
+              <button class="quote-video-button" type="button" data-quote-video="FLzSG59n0wA" aria-expanded="false">▶ Guarda la scena italiana</button>
+              <div class="quote-video" data-quote-player hidden></div>
+            </article>
+            <article class="quote-card">
+              <div class="card-topline"><span>Lo Hobbit · Un viaggio inaspettato</span><span class="pill">Italiano</span></div>
+              <blockquote>“Sono le piccole cose, le azioni quotidiane della gente comune, che tengono a bada l'oscurità.”</blockquote>
+              <p class="quote-caption">Gandalf e Galadriel: la luce non ha sempre bisogno di fare rumore.</p>
+              <button class="quote-video-button" type="button" data-quote-video="FBMOlxRXcac" aria-expanded="false">▶ Guarda la scena italiana</button>
+              <div class="quote-video" data-quote-player hidden></div>
+            </article>
+            <article class="quote-card">
+              <div class="card-topline"><span>Naruto · La promessa</span><span class="pill">Italiano</span></div>
+              <blockquote>“Diventerò Hokage, costi quel che costi!”</blockquote>
+              <p class="quote-caption">Determinazione ostinata, energia da training arc e zero intenzione di mollare.</p>
+              <button class="quote-video-button" type="button" data-quote-video="d4JfMlLfpuU" aria-expanded="false">▶ Guarda la scena italiana</button>
+              <div class="quote-video" data-quote-player hidden></div>
+            </article>
+            <article class="quote-card">
+              <div class="card-topline"><span>Hercules · Un vero eroe</span><span class="pill">Italiano</span></div>
+              <blockquote>“Un vero eroe non si misura dalla forza che possiede, ma da quella che ha nel cuore.”</blockquote>
+              <p class="quote-caption">La versione Disney del power-up che conta davvero.</p>
+              <button class="quote-video-button" type="button" data-quote-video="YdudxmuJd0E" aria-expanded="false">▶ Guarda la scena italiana</button>
+              <div class="quote-video" data-quote-player hidden></div>
+            </article>
+            <article class="quote-card">
+              <div class="card-topline"><span>Harry Potter · I ricordi di Piton</span><span class="pill">Italiano</span></div>
+              <blockquote>“Dopo tutto questo tempo?” — “Sempre.”</blockquote>
+              <p class="quote-caption">Una parola sola, ma con dentro una vita intera.</p>
+              <button class="quote-video-button" type="button" data-quote-video="ep72Jcd2INw" aria-expanded="false">▶ Guarda la scena italiana</button>
+              <div class="quote-video" data-quote-player hidden></div>
+            </article>
+            <article class="quote-card quote-card-last">
+              <div class="card-topline"><span>Dragon Ball Z · Kamehameha padre e figlio</span><span class="pill">Italiano</span></div>
+              <blockquote>“La forza passa di padre in figlio.”</blockquote>
+              <p class="quote-caption">Il momento in cui il power-up diventa una staffetta generazionale.</p>
+              <button class="quote-video-button" type="button" data-quote-video="nez0zhnrcEw" aria-expanded="false">▶ Guarda la scena italiana</button>
+              <div class="quote-video" data-quote-player hidden></div>
+            </article>
+            <article class="quote-card instagram-card">
+              <div class="card-topline"><span>Frame dalla Caverna di Luca · Instagram</span><span class="pill">Reel</span></div>
+              <blockquote>Un altro frammento dalla caverna.</blockquote>
+              <p class="quote-caption">Embed ufficiale Instagram: il reel viene caricato solo quando scegli di aprirlo.</p>
+              <button class="quote-video-button" type="button" data-instagram-video="DKmG8oYvC2k" aria-expanded="false">▣ Apri il frame Instagram</button>
+              <div class="instagram-player" data-instagram-player hidden></div>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section id="systems" class="section section-muted">
-        <div class="shell">
-          <div class="section-heading">
-            <p class="eyebrow">02 / Sistemi di ricerca</p>
-            <h2>Strumenti, modelli e saggi aperti.</h2>
-          </div>
-          <div class="system-grid">
-            <a class="system-card system-card-large" href="https://github.com/Lukecele/spatial-continuum-oncology" data-track="system_spatial_continuum">
-              <span class="system-index">01</span>
-              <span class="system-title">Spatial Continuum Oncology</span>
-              <span class="system-description">Trasporto a reazione-diffusione, Bessel K₀ modificata, CRI al letto del paziente e digital twin tumorale a 60 FPS.</span>
-              <span class="system-arrow" aria-hidden="true">↗</span>
-            </a>
-            <a class="system-card" href="https://github.com/Lukecele/spatial-game-assay" data-track="system_insitugame">
-              <span class="system-index">02</span>
-              <span class="system-title">InSituGame</span>
-              <span class="system-description">Saggio di gioco evolutivo per matrici di payoff subclonali spaziali e ricerca sulla terapia adattiva.</span>
-              <span class="system-arrow" aria-hidden="true">↗</span>
-            </a>
-            <a class="system-card" href="https://github.com/Lukecele/spatial-he-vision-study4" data-track="system_insituvision">
-              <span class="system-index">03</span>
-              <span class="system-title">InSituVision-AI</span>
-              <span class="system-description">Ricerca di patologia digitale con Attention-MIL su immagini whole-slide H&E di routine.</span>
-              <span class="system-arrow" aria-hidden="true">↗</span>
-            </a>
-            <a class="system-card" href="https://github.com/Lukecele/spatial-oncology-master" data-track="system_spatial_master">
-              <span class="system-index">04</span>
-              <span class="system-title">Spatial Oncology Master</span>
-              <span class="system-description">Solver di trasporto con Bessel K₀ cilindrica e validazione su coorte clinica.</span>
-              <span class="system-arrow" aria-hidden="true">↗</span>
-            </a>
-            <a class="system-card" href="https://github.com/Lukecele/spatial-architecture-osimertinib" data-track="system_spatial_architecture">
-              <span class="system-index">05</span>
-              <span class="system-title">Spatial Architecture</span>
-              <span class="system-description">Analisi spaziale Visium HD dei limiti di trasporto subcellulare nel NSCLC EGFR-mutato.</span>
-              <span class="system-arrow" aria-hidden="true">↗</span>
-            </a>
-            <a class="system-card" href="https://cardio-thoracic-medterminal.vercel.app/" data-track="system_medterminal">
-              <span class="system-index">06</span>
-              <span class="system-title">MedTerminal</span>
-              <span class="system-description">Anatomia 3D interattiva, simulazione ECG e active recall per la formazione medica.</span>
-              <span class="system-quote">“Non vede dove il cuore lo porta quando il sole è calato e la luna è morta.”</span>
-              <span class="system-arrow" aria-hidden="true">↗</span>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section id="lab" class="section shell">
+      <!-- 05 / CONTATTI E RETE ISTITUZIONALE -->
+      <section id="contact" class="section shell">
         <div class="section-heading">
-          <p class="eyebrow">03 / Laboratorio interattivo</p>
-          <h2>Guarda i modelli in azione.</h2>
-          <p class="section-intro">La ricerca va ispezionata, non solo descritta. Esplora demo e dataset pubblici attorno ai repository principali.</p>
+          <p class="eyebrow">05 / Contatti e Rete</p>
+          <h2>Parliamo di ricerca, modelli e open science.</h2>
+          <p class="section-intro">Disponibile per scambi accademici, tesi di laurea, review di codice e collaborazioni scientifiche su oncologia computazionale e biologia spaziale.</p>
         </div>
-        <div class="lab-grid">
-          <a class="lab-card lab-card-primary" href="https://huggingface.co/spaces/spatial-continuum-lab/tumor-cord-sanctuary-3d" data-track="lab_huggingface_3d">
-            <span class="lab-kicker">Hugging Face Space</span>
-            <strong>3D Tumor Sanctuary</strong>
-            <span>Digital twin interattivo della reazione-diffusione perivascolare.</span>
-            <span class="lab-link">Apri lo Space ↗</span>
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:l.celebrano@studenti.unina.it" data-track="contact_email">
+            <div class="card-topline"><span>Istituzionale</span><span class="pill pill-green">Diretto</span></div>
+            <strong>Email accademica</strong>
+            <span>Per richieste di ricerca, tesisti, collaborazioni e scambi universitari.</span>
+            <span class="contact-meta">l.celebrano@studenti.unina.it ↗</span>
           </a>
-          <a class="lab-card" href="https://lukecele.github.io/spatial-continuum-oncology/simulator.html" data-track="lab_simulator_live">
-            <span class="lab-kicker">Live simulator</span>
-            <strong>Spatial Oncology Simulator</strong>
-            <span>Guarda in tempo reale i gradienti di concentrazione e le dinamiche dei santuari.</span>
-            <span class="lab-link">Apri il simulatore ↗</span>
+          <a class="contact-card" href="https://github.com/Lukecele" target="_blank" rel="noopener noreferrer" data-track="contact_github">
+            <div class="card-topline"><span>Codice & Dati</span><span class="pill">Open Source</span></div>
+            <strong>GitHub @Lukecele</strong>
+            <span>Oltre 45 repository pubblici, modelli di reazione-diffusione e pipeline riproducibili.</span>
+            <span class="contact-meta">github.com/Lukecele ↗</span>
           </a>
-          <a class="lab-card" href="https://huggingface.co/datasets/spatial-continuum-lab/mskcc-lung-adenocarcinoma-spatial-cohort" data-track="lab_mskcc_dataset">
-            <span class="lab-kicker">Hugging Face Dataset</span>
-            <strong>MSKCC LUAD cohort</strong>
-            <span>Dati di ricerca curati e risorse per la riproducibilità.</span>
-            <span class="lab-link">Vedi il dataset ↗</span>
+          <a class="contact-card" href="https://www.linkedin.com/in/luca-celebrano/" target="_blank" rel="noopener noreferrer" data-track="contact_linkedin">
+            <div class="card-topline"><span>Network</span><span class="pill">Professionale</span></div>
+            <strong>LinkedIn</strong>
+            <span>Discussioni scientifiche, aggiornamenti sui preprint e annunci di ricerca.</span>
+            <span class="contact-meta">linkedin.com/in/luca-celebrano ↗</span>
           </a>
-        </div>
-      </section>
-            <span>Dati di ricerca curati e risorse per la riproducibilità.</span>
-            <span class="lab-link">Vedi il dataset ↗</span>
+          <a class="contact-card" href="https://orcid.org/0009-0007-0931-3555" target="_blank" rel="noopener noreferrer" data-track="contact_orcid">
+            <div class="card-topline"><span>Identificativo</span><span class="pill">Ricerca</span></div>
+            <strong>ORCID</strong>
+            <span>Profilo permanente di ricerca, pubblicazioni e record accademico.</span>
+            <span class="contact-meta">0009-0007-0931-3555 ↗</span>
           </a>
-        </div>
-      </section>
-
-      <section class="section quest-section">
-        <div class="shell quest-panel">
-          <div>
-            <p class="eyebrow">04 / Missioni laterali</p>
-            <h2>Scienza seria. Lore esageratamente bella.</h2>
-            <p class="section-intro">Il lavoro è rigoroso. La dashboard non deve per forza sembrare progettata da un comitato di rettangoli beige.</p>
-          </div>
-          <div class="quest-grid">
-            <button class="quest-card" type="button" data-quest-card="data">
-              <span class="quest-icon">◈</span>
-              <strong>Compagnia dei dati puliti</strong>
-              <span>Una pipeline, molti dataset, zero CSV misteriosi.</span>
-            </button>
-            <button class="quest-card" type="button" data-quest-card="wizard">
-              <span class="quest-icon">✦</span>
-              <strong>Modalità mago: seed deterministici</strong>
-              <span>Niente incantesimi: solo ambienti riproducibili.</span>
-            </button>
-            <button class="quest-card" type="button" data-quest-card="training">
-              <span class="quest-icon">⚡</span>
-              <strong>Validazione da eroe</strong>
-              <span>Più test, meno mostri nascosti in produzione.</span>
-            </button>
-            <button class="quest-card" type="button" data-quest-card="focus">
-              <span class="quest-icon">☄</span>
-              <strong>Protocollo concentrazione anime</strong>
-              <span>Carica l'analisi, poi controlla due volte le ipotesi.</span>
-            </button>
-            <button class="quest-card quest-card-power" type="button" data-quest-card="power">
-              <span class="quest-icon">✦</span>
-              <strong>Modalità validazione power-up</strong>
-              <span>Aumenta la suite di test, non l'intervallo di confidenza.</span>
-            </button>
-          </div>
-          <p class="quest-motto" data-motto aria-live="polite">Un buon ricercatore porta sempre un seed di riserva.</p>
-        </div>
-      </section>
-
-      <section class="section section-dark">
-        <div class="shell compact-section">
-          <div>
-            <p class="eyebrow">05 / Background ingegneristico</p>
-            <h2>Prima di medicina, costruivo in Web3.</h2>
-          </div>
-          <p>In passato ho fondato <a href="https://github.com/arbincept">Arbitrage Inception</a>, un'organizzazione open source di ingegneria DeFi. Quell'esperienza in progettazione di protocolli, security research e sistemi full-stack oggi alimenta il mio lavoro sul software scientifico.</p>
-        </div>
-      </section>
-
-      <section id="quotes" class="section shell">
-        <div class="section-heading">
-          <p class="eyebrow">06 / Citazioni e scene</p>
-          <h2>Le scene che restano.</h2>
-          <p class="section-intro">Prima il lavoro, poi la lore: qui trovi le citazioni personali e i frame video, caricati solo quando scegli di aprirli.</p>
-        </div>
-        <div class="quote-grid">
-          <article class="quote-card">
-            <div class="card-topline"><span>Il Signore degli Anelli · Le due torri</span><span class="pill">Italiano</span></div>
-            <blockquote>“C'è del buono in questo mondo, padron Frodo. È giusto combattere per questo.”</blockquote>
-            <p class="quote-caption">Quando tutto sembra perso, Sam ricorda perché vale la pena andare avanti.</p>
-            <button class="quote-video-button" type="button" data-quote-video="KknHpZsdqYE" aria-expanded="false">▶ Guarda la scena italiana</button>
-            <div class="quote-video" data-quote-player hidden></div>
-          </article>
-          <article class="quote-card">
-            <div class="card-topline"><span>Il Signore degli Anelli · Il ritorno del re</span><span class="pill">Italiano</span></div>
-            <blockquote>“Figli di Gondor, di Rohan, fratelli miei! [...] Ma non è questo il giorno! Quest'oggi combattiamo. Uomini dell'Ovest!”</blockquote>
-            <p class="quote-caption">Aragorn davanti al Cancello Nero: il coraggio non è non avere paura, è restare insieme.</p>
-            <button class="quote-video-button" type="button" data-quote-video="FLzSG59n0wA" aria-expanded="false">▶ Guarda la scena italiana</button>
-            <div class="quote-video" data-quote-player hidden></div>
-          </article>
-          <article class="quote-card">
-            <div class="card-topline"><span>Lo Hobbit · Un viaggio inaspettato</span><span class="pill">Italiano</span></div>
-            <blockquote>“Sono le piccole cose, le azioni quotidiane della gente comune, che tengono a bada l'oscurità.”</blockquote>
-            <p class="quote-caption">Gandalf e Galadriel: la luce non ha sempre bisogno di fare rumore.</p>
-            <button class="quote-video-button" type="button" data-quote-video="FBMOlxRXcac" aria-expanded="false">▶ Guarda la scena italiana</button>
-            <div class="quote-video" data-quote-player hidden></div>
-          </article>
-          <article class="quote-card">
-            <div class="card-topline"><span>Naruto · La promessa</span><span class="pill">Italiano</span></div>
-            <blockquote>“Diventerò Hokage, costi quel che costi!”</blockquote>
-            <p class="quote-caption">Determinazione ostinata, energia da training arc e zero intenzione di mollare.</p>
-            <button class="quote-video-button" type="button" data-quote-video="d4JfMlLfpuU" aria-expanded="false">▶ Guarda la scena italiana</button>
-            <div class="quote-video" data-quote-player hidden></div>
-          </article>
-          <article class="quote-card">
-            <div class="card-topline"><span>Hercules · Un vero eroe</span><span class="pill">Italiano</span></div>
-            <blockquote>“Un vero eroe non si misura dalla forza che possiede, ma da quella che ha nel cuore.”</blockquote>
-            <p class="quote-caption">La versione Disney del power-up che conta davvero.</p>
-            <button class="quote-video-button" type="button" data-quote-video="YdudxmuJd0E" aria-expanded="false">▶ Guarda la scena italiana</button>
-            <div class="quote-video" data-quote-player hidden></div>
-          </article>
-          <article class="quote-card">
-            <div class="card-topline"><span>Harry Potter · I ricordi di Piton</span><span class="pill">Italiano</span></div>
-            <blockquote>“Dopo tutto questo tempo?” — “Sempre.”</blockquote>
-            <p class="quote-caption">Una parola sola, ma con dentro una vita intera.</p>
-            <button class="quote-video-button" type="button" data-quote-video="ep72Jcd2INw" aria-expanded="false">▶ Guarda la scena italiana</button>
-            <div class="quote-video" data-quote-player hidden></div>
-          </article>
-          <article class="quote-card quote-card-last">
-            <div class="card-topline"><span>Dragon Ball Z · Kamehameha padre e figlio</span><span class="pill">Italiano</span></div>
-            <blockquote>“La forza passa di padre in figlio.”</blockquote>
-            <p class="quote-caption">Il momento in cui il power-up diventa una staffetta generazionale.</p>
-            <button class="quote-video-button" type="button" data-quote-video="nez0zhnrcEw" aria-expanded="false">▶ Guarda la scena italiana</button>
-            <div class="quote-video" data-quote-player hidden></div>
-          </article>
-          <article class="quote-card instagram-card">
-            <div class="card-topline"><span>Frame dalla Caverna di Luca · Instagram</span><span class="pill">Reel</span></div>
-            <blockquote>Un altro frammento dalla caverna.</blockquote>
-            <p class="quote-caption">Embed ufficiale Instagram: il reel viene caricato solo quando scegli di aprirlo.</p>
-            <button class="quote-video-button" type="button" data-instagram-video="DKmG8oYvC2k" aria-expanded="false">▣ Apri il frame Instagram</button>
-            <div class="instagram-player" data-instagram-player hidden></div>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact" class="section section-dark">
-        <div class="shell">
-          <div class="section-heading">
-            <p class="eyebrow">07 / Contatti e Rete</p>
-            <h2>Parliamo di ricerca, modelli e open science.</h2>
-            <p class="section-intro">Disponibile per scambi accademici, tesi di laurea, review di codice e collaborazioni scientifiche su oncologia computazionale e biologia spaziale.</p>
-          </div>
-          <div class="contact-grid">
-            <a class="contact-card" href="mailto:l.celebrano@studenti.unina.it" data-track="contact_email">
-              <div class="card-topline"><span>Istituzionale</span><span class="pill pill-green">Diretto</span></div>
-              <strong>Email accademica</strong>
-              <span>Per richieste di ricerca, tesisti, collaborazioni e scambi universitari.</span>
-              <span class="contact-meta">l.celebrano@studenti.unina.it ↗</span>
-            </a>
-            <a class="contact-card" href="https://github.com/Lukecele" target="_blank" rel="noopener noreferrer" data-track="contact_github">
-              <div class="card-topline"><span>Codice & Dati</span><span class="pill">Open Source</span></div>
-              <strong>GitHub @Lukecele</strong>
-              <span>Oltre 45 repository pubblici, modelli di reazione-diffusione e pipeline riproducibili.</span>
-              <span class="contact-meta">github.com/Lukecele ↗</span>
-            </a>
-            <a class="contact-card" href="https://www.linkedin.com/in/luca-celebrano/" target="_blank" rel="noopener noreferrer" data-track="contact_linkedin">
-              <div class="card-topline"><span>Network</span><span class="pill">Professionale</span></div>
-              <strong>LinkedIn</strong>
-              <span>Discussioni scientifiche, aggiornamenti sui preprint e annunci di ricerca.</span>
-              <span class="contact-meta">linkedin.com/in/luca-celebrano ↗</span>
-            </a>
-            <a class="contact-card" href="https://orcid.org/0009-0007-0931-3555" target="_blank" rel="noopener noreferrer" data-track="contact_orcid">
-              <div class="card-topline"><span>Identificativo</span><span class="pill">Ricerca</span></div>
-              <strong>ORCID</strong>
-              <span>Profilo permanente di ricerca, pubblicazioni e record accademico.</span>
-              <span class="contact-meta">0009-0007-0931-3555 ↗</span>
-            </a>
-            <a class="contact-card" href="https://huggingface.co/spatial-continuum-lab" target="_blank" rel="noopener noreferrer" data-track="contact_huggingface">
-              <div class="card-topline"><span>Modelli 3D</span><span class="pill pill-green">Community</span></div>
-              <strong>Hugging Face Lab</strong>
-              <span>Digital twin interattivi, Space 3D WebGL e dataset clinici LUAD curati.</span>
-              <span class="contact-meta">spatial-continuum-lab ↗</span>
-            </a>
-          </div>
+          <a class="contact-card" href="https://huggingface.co/spatial-continuum-lab" target="_blank" rel="noopener noreferrer" data-track="contact_huggingface">
+            <div class="card-topline"><span>Modelli 3D</span><span class="pill pill-green">Community</span></div>
+            <strong>Hugging Face Lab</strong>
+            <span>Digital twin interattivi, Space 3D WebGL e dataset clinici LUAD curati.</span>
+            <span class="contact-meta">spatial-continuum-lab ↗</span>
+          </a>
         </div>
       </section>
     </main>
