@@ -1,4 +1,4 @@
-const CACHE = "lukecele-research-v31";
+const CACHE = "lukecele-research-v32";
 const CORE = [
   "/",
   "/index.html",
