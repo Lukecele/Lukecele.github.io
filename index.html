@@ -15,7 +15,7 @@
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/icon-192.png" />
-    <link rel="stylesheet" href="/styles.css?v=7" />
+    <link rel="stylesheet" href="/styles.css?v=8" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://lukecele-research.vercel.app/" />
     <meta property="og:title" content="Caverna di Luca | Luca Celebrano" />
@@ -102,18 +102,23 @@
           <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Medicina × computazione × scienza aperta</p>
           <h1>Creo strumenti per capire <em>dove</em> succede la biologia del cancro.</h1>
           <p class="hero-lede">Sono uno studente di medicina e sto svolgendo una tesi in bioinformatica al TIGEM. Lavoro in autonomia su oncologia computazionale, spatial multi-omics e software di ricerca riproducibile.</p>
+          <div class="hero-feature-pills">
+            <span>⚡ Digital twin 3D a 60 FPS</span>
+            <span>◈ Solver di reazione-diffusione</span>
+            <span>✦ Codice aperto</span>
+          </div>
           <div class="hero-actions">
-            <a class="button button-primary" href="#research">Esplora la ricerca <span aria-hidden="true">↓</span></a>
-            <a class="button button-quiet" href="https://github.com/Lukecele" rel="me noopener" target="_blank">Apri GitHub <span aria-hidden="true">↗</span></a>
+            <a class="button button-primary" href="#research" data-track="hero_explore_research">✦ Scopri la ricerca & i modelli 3D <span aria-hidden="true">↓</span></a>
+            <a class="button button-quiet" href="https://github.com/Lukecele" rel="me noopener" target="_blank" data-track="hero_github">Apri GitHub <span aria-hidden="true">↗</span></a>
           </div>
           <div class="quick-links" aria-label="Link del profilo">
-            <a href="https://orcid.org/0009-0007-0931-3555" rel="me noopener" target="_blank">ORCID</a>
-            <a href="https://www.linkedin.com/in/luca-celebrano/" rel="me noopener" target="_blank">LinkedIn</a>
-            <a href="https://huggingface.co/spatial-continuum-lab" rel="me noopener" target="_blank">Lab Hugging Face</a>
+            <a href="https://orcid.org/0009-0007-0931-3555" rel="me noopener" target="_blank" data-track="hero_orcid">ORCID</a>
+            <a href="https://www.linkedin.com/in/luca-celebrano/" rel="me noopener" target="_blank" data-track="hero_linkedin">LinkedIn</a>
+            <a href="https://huggingface.co/spatial-continuum-lab" rel="me noopener" target="_blank" data-track="hero_huggingface">Lab Hugging Face</a>
           </div>
-          <button class="quest-button" type="button" data-quest>✦ Sblocca una side quest di ricerca</button>
+          <button class="quest-button" type="button" data-quest data-track="hero_side_quest">✦ Sblocca una side quest di ricerca</button>
           <div class="music-dock">
-            <button class="sound-toggle" type="button" data-youtube>▶ Hey Brother · YouTube</button>
+            <button class="sound-toggle" type="button" data-youtube data-track="hero_youtube_music">▶ Hey Brother · YouTube</button>
             <span>Pausa musicale opzionale · clicca per caricare</span>
             <div class="youtube-player" data-youtube-player hidden></div>
           </div>
@@ -140,7 +145,7 @@
           </div>
           <article class="featured-instagram-card">
             <div class="card-topline"><span>Caverna di Luca · Frame principale</span><span class="pill">YouTube</span></div>
-            <button class="quote-video-button" type="button" data-quote-video="0tg97RAcx-Q" aria-expanded="false">▶ Guarda la scena su YouTube</button>
+            <button class="quote-video-button" type="button" data-quote-video="0tg97RAcx-Q" aria-expanded="false" data-track="main_frame_legend">▶ Guarda la scena su YouTube</button>
             <div class="quote-video" data-quote-player hidden></div>
           </article>
         </div>
@@ -157,9 +162,10 @@
             <h3>The Spatial-Genomic Oncology Continuum</h3>
             <p>Una teoria biofisica di reazione-diffusione dei santuari farmacologici, il dilemma della sospensione post-ADAURA e il protocollo dello studio clinico SG-ADAURA.</p>
             <div class="card-links">
-              <a href="https://github.com/Lukecele/spatial-continuum-oncology">Repository ↗</a>
-              <a href="https://bio.tools/spatial-continuum-oncology">bio.tools ↗</a>
-              <a href="https://doi.org/10.21203/rs.3.rs-11530312/v1">DOI del preprint ↗</a>
+            <div class="card-links">
+              <a href="https://github.com/Lukecele/spatial-continuum-oncology" data-track="research_spatial_continuum_repo">Repository ↗</a>
+              <a href="https://bio.tools/spatial-continuum-oncology" data-track="research_spatial_continuum_biotools">bio.tools ↗</a>
+              <a href="https://doi.org/10.21203/rs.3.rs-11530312/v1" data-track="research_spatial_continuum_doi">DOI del preprint ↗</a>
             </div>
           </article>
           <article class="research-card">
@@ -167,9 +173,10 @@
             <h3>Estensioni traslazionali</h3>
             <p>Un pacchetto di ricerca collegato alle evidenze, con score esplorativo del fenotipo GIST, protocollo di studio, registro dei dati candidati e strumenti CRI per audit di ricerca.</p>
             <div class="card-links">
-              <a href="https://github.com/Lukecele/spatial-continuum-translational">Repository ↗</a>
-              <a href="https://bio.tools/spatial-continuum-translational">bio.tools ↗</a>
-              <a href="https://doi.org/10.21203/rs.3.rs-11633521/v1">DOI del preprint ↗</a>
+              <a href="https://github.com/Lukecele/spatial-continuum-translational" data-track="research_translational_repo">Repository ↗</a>
+              <a href="https://bio.tools/spatial-continuum-translational" data-track="research_translational_biotools">bio.tools ↗</a>
+              <a href="https://doi.org/10.21203/rs.3.rs-11633521/v1" data-track="research_translational_doi">DOI del preprint ↗</a>
+            </div>
             </div>
           </article>
         </div>
@@ -182,37 +189,37 @@
             <h2>Strumenti, modelli e saggi aperti.</h2>
           </div>
           <div class="system-grid">
-            <a class="system-card system-card-large" href="https://github.com/Lukecele/spatial-continuum-oncology">
+            <a class="system-card system-card-large" href="https://github.com/Lukecele/spatial-continuum-oncology" data-track="system_spatial_continuum">
               <span class="system-index">01</span>
               <span class="system-title">Spatial Continuum Oncology</span>
               <span class="system-description">Trasporto a reazione-diffusione, Bessel K₀ modificata, CRI al letto del paziente e digital twin tumorale a 60 FPS.</span>
               <span class="system-arrow" aria-hidden="true">↗</span>
             </a>
-            <a class="system-card" href="https://github.com/Lukecele/spatial-game-assay">
+            <a class="system-card" href="https://github.com/Lukecele/spatial-game-assay" data-track="system_insitugame">
               <span class="system-index">02</span>
               <span class="system-title">InSituGame</span>
               <span class="system-description">Saggio di gioco evolutivo per matrici di payoff subclonali spaziali e ricerca sulla terapia adattiva.</span>
               <span class="system-arrow" aria-hidden="true">↗</span>
             </a>
-            <a class="system-card" href="https://github.com/Lukecele/spatial-he-vision-study4">
+            <a class="system-card" href="https://github.com/Lukecele/spatial-he-vision-study4" data-track="system_insituvision">
               <span class="system-index">03</span>
               <span class="system-title">InSituVision-AI</span>
               <span class="system-description">Ricerca di patologia digitale con Attention-MIL su immagini whole-slide H&E di routine.</span>
               <span class="system-arrow" aria-hidden="true">↗</span>
             </a>
-            <a class="system-card" href="https://github.com/Lukecele/spatial-oncology-master">
+            <a class="system-card" href="https://github.com/Lukecele/spatial-oncology-master" data-track="system_spatial_master">
               <span class="system-index">04</span>
               <span class="system-title">Spatial Oncology Master</span>
               <span class="system-description">Solver di trasporto con Bessel K₀ cilindrica e validazione su coorte clinica.</span>
               <span class="system-arrow" aria-hidden="true">↗</span>
             </a>
-            <a class="system-card" href="https://github.com/Lukecele/spatial-architecture-osimertinib">
+            <a class="system-card" href="https://github.com/Lukecele/spatial-architecture-osimertinib" data-track="system_spatial_architecture">
               <span class="system-index">05</span>
               <span class="system-title">Spatial Architecture</span>
               <span class="system-description">Analisi spaziale Visium HD dei limiti di trasporto subcellulare nel NSCLC EGFR-mutato.</span>
               <span class="system-arrow" aria-hidden="true">↗</span>
             </a>
-            <a class="system-card" href="https://cardio-thoracic-medterminal.vercel.app/">
+            <a class="system-card" href="https://cardio-thoracic-medterminal.vercel.app/" data-track="system_medterminal">
               <span class="system-index">06</span>
               <span class="system-title">MedTerminal</span>
               <span class="system-description">Anatomia 3D interattiva, simulazione ECG e active recall per la formazione medica.</span>
@@ -230,21 +237,26 @@
           <p class="section-intro">La ricerca va ispezionata, non solo descritta. Esplora demo e dataset pubblici attorno ai repository principali.</p>
         </div>
         <div class="lab-grid">
-          <a class="lab-card lab-card-primary" href="https://huggingface.co/spaces/spatial-continuum-lab/tumor-cord-sanctuary-3d">
+          <a class="lab-card lab-card-primary" href="https://huggingface.co/spaces/spatial-continuum-lab/tumor-cord-sanctuary-3d" data-track="lab_huggingface_3d">
             <span class="lab-kicker">Hugging Face Space</span>
             <strong>3D Tumor Sanctuary</strong>
             <span>Digital twin interattivo della reazione-diffusione perivascolare.</span>
             <span class="lab-link">Apri lo Space ↗</span>
           </a>
-          <a class="lab-card" href="https://lukecele.github.io/spatial-continuum-oncology/simulator.html">
+          <a class="lab-card" href="https://lukecele.github.io/spatial-continuum-oncology/simulator.html" data-track="lab_simulator_live">
             <span class="lab-kicker">Live simulator</span>
             <strong>Spatial Oncology Simulator</strong>
             <span>Guarda in tempo reale i gradienti di concentrazione e le dinamiche dei santuari.</span>
             <span class="lab-link">Apri il simulatore ↗</span>
           </a>
-          <a class="lab-card" href="https://huggingface.co/datasets/spatial-continuum-lab/mskcc-lung-adenocarcinoma-spatial-cohort">
+          <a class="lab-card" href="https://huggingface.co/datasets/spatial-continuum-lab/mskcc-lung-adenocarcinoma-spatial-cohort" data-track="lab_mskcc_dataset">
             <span class="lab-kicker">Hugging Face Dataset</span>
             <strong>MSKCC LUAD cohort</strong>
+            <span>Dati di ricerca curati e risorse per la riproducibilità.</span>
+            <span class="lab-link">Vedi il dataset ↗</span>
+          </a>
+        </div>
+      </section>
             <span>Dati di ricerca curati e risorse per la riproducibilità.</span>
             <span class="lab-link">Vedi il dataset ↗</span>
           </a>
@@ -373,31 +385,31 @@
             <p class="section-intro">Disponibile per scambi accademici, tesi di laurea, review di codice e collaborazioni scientifiche su oncologia computazionale e biologia spaziale.</p>
           </div>
           <div class="contact-grid">
-            <a class="contact-card" href="mailto:l.celebrano@studenti.unina.it">
+            <a class="contact-card" href="mailto:l.celebrano@studenti.unina.it" data-track="contact_email">
               <div class="card-topline"><span>Istituzionale</span><span class="pill pill-green">Diretto</span></div>
               <strong>Email accademica</strong>
               <span>Per richieste di ricerca, tesisti, collaborazioni e scambi universitari.</span>
               <span class="contact-meta">l.celebrano@studenti.unina.it ↗</span>
             </a>
-            <a class="contact-card" href="https://github.com/Lukecele" target="_blank" rel="noopener noreferrer">
+            <a class="contact-card" href="https://github.com/Lukecele" target="_blank" rel="noopener noreferrer" data-track="contact_github">
               <div class="card-topline"><span>Codice & Dati</span><span class="pill">Open Source</span></div>
               <strong>GitHub @Lukecele</strong>
               <span>Oltre 45 repository pubblici, modelli di reazione-diffusione e pipeline riproducibili.</span>
               <span class="contact-meta">github.com/Lukecele ↗</span>
             </a>
-            <a class="contact-card" href="https://www.linkedin.com/in/luca-celebrano/" target="_blank" rel="noopener noreferrer">
+            <a class="contact-card" href="https://www.linkedin.com/in/luca-celebrano/" target="_blank" rel="noopener noreferrer" data-track="contact_linkedin">
               <div class="card-topline"><span>Network</span><span class="pill">Professionale</span></div>
               <strong>LinkedIn</strong>
               <span>Discussioni scientifiche, aggiornamenti sui preprint e annunci di ricerca.</span>
               <span class="contact-meta">linkedin.com/in/luca-celebrano ↗</span>
             </a>
-            <a class="contact-card" href="https://orcid.org/0009-0007-0931-3555" target="_blank" rel="noopener noreferrer">
+            <a class="contact-card" href="https://orcid.org/0009-0007-0931-3555" target="_blank" rel="noopener noreferrer" data-track="contact_orcid">
               <div class="card-topline"><span>Identificativo</span><span class="pill">Ricerca</span></div>
               <strong>ORCID</strong>
               <span>Profilo permanente di ricerca, pubblicazioni e record accademico.</span>
               <span class="contact-meta">0009-0007-0931-3555 ↗</span>
             </a>
-            <a class="contact-card" href="https://huggingface.co/spatial-continuum-lab" target="_blank" rel="noopener noreferrer">
+            <a class="contact-card" href="https://huggingface.co/spatial-continuum-lab" target="_blank" rel="noopener noreferrer" data-track="contact_huggingface">
               <div class="card-topline"><span>Modelli 3D</span><span class="pill pill-green">Community</span></div>
               <strong>Hugging Face Lab</strong>
               <span>Digital twin interattivi, Space 3D WebGL e dataset clinici LUAD curati.</span>
@@ -428,6 +440,6 @@
       </div>
     </footer>
 
-    <script src="/app.bundle.js?v=1" defer></script>
+    <script src="/app.bundle.js?v=2" defer></script>
   </body>
 </html>

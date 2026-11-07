@@ -1,6 +1,13 @@
-import { inject } from "@vercel/analytics";
+import { inject, track } from "@vercel/analytics";
 
 inject();
+
+document.addEventListener("click", (event) => {
+  const target = event.target.closest("[data-track]");
+  if (target && target.dataset.track) {
+    track(target.dataset.track);
+  }
+});
 
 const menuToggle = document.querySelector(".menu-toggle");
 const siteNav = document.querySelector("#site-nav");
