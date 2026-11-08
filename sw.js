@@ -1,10 +1,10 @@
-const CACHE = "lukecele-research-v35";
+const CACHE = "lukecele-research-v36";
 const CORE = [
   "/",
   "/index.html",
   "/privacy.html",
   "/cookie-policy.html",
-  "/styles.css?v=12",
+  "/styles.css?v=14",
   "/app.bundle.js?v=4",
   "/manifest.webmanifest",
   "/icon-192.png",
