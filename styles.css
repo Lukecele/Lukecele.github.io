@@ -66,8 +66,21 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outlin
 .main-frame-section { border-block: 1px solid rgba(96, 217, 197, .2); background: linear-gradient(135deg, #10243a, #0b1524); }
 .featured-instagram-card { max-width: 760px; padding: 26px; border: 1px solid rgba(96, 217, 197, .45); border-radius: var(--radius); background: rgba(16, 31, 51, .86); box-shadow: 0 24px 70px rgba(0, 0, 0, .28); }
 .featured-instagram-card .instagram-player { max-width: 620px; }
-.youtube-shorts-wrapper { width: 100%; max-width: 380px; margin: 24px auto; aspect-ratio: 9 / 16; border-radius: 18px; overflow: hidden; border: 1px solid rgba(96, 217, 197, .38); box-shadow: 0 16px 48px rgba(0, 0, 0, .45); background: #000; }
+.youtube-shorts-wrapper { width: 100%; max-width: 380px; margin: 18px auto; aspect-ratio: 9 / 16; border-radius: 18px; overflow: hidden; border: 1px solid rgba(96, 217, 197, .38); box-shadow: 0 16px 48px rgba(0, 0, 0, .45); background: #000; }
 .youtube-shorts-wrapper iframe, .youtube-shorts-wrapper video { width: 100%; height: 100%; border: 0; display: block; object-fit: contain; }
+.shorts-showcase { max-width: 980px; margin-inline: auto; margin-bottom: 44px; padding: 24px; border: 1px solid rgba(96, 217, 197, .45); border-radius: var(--radius); background: rgba(16, 31, 51, .88); box-shadow: 0 24px 70px rgba(0, 0, 0, .32); display: flex; flex-direction: column; gap: 16px; }
+.shorts-features { list-style: none; padding: 0; margin: 12px 0 20px; display: flex; flex-direction: column; gap: 8px; font-size: .88rem; color: var(--muted); }
+.shorts-features li { display: flex; align-items: center; gap: 8px; }
+.shorts-features span { color: var(--accent); }
+.shorts-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.shorts-actions.mobile-only { justify-content: center; margin-top: 4px; }
+.shorts-actions.desktop-only { display: none; }
+@media (min-width: 860px) {
+  .shorts-showcase { display: grid; grid-template-columns: 1.15fr 330px; gap: 40px; padding: 36px 40px; align-items: center; }
+  .shorts-actions.mobile-only { display: none; }
+  .shorts-actions.desktop-only { display: flex; justify-content: flex-start; }
+  .shorts-showcase .youtube-shorts-wrapper { margin: 0 auto; width: 330px; box-shadow: 0 20px 50px rgba(0, 0, 0, .55); }
+}
 @media (min-width: 1000px) {
   .quote-card-last { grid-column: 2; }
 }
