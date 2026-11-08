@@ -55,7 +55,7 @@ youtubeButton?.addEventListener("click", () => {
   }
   const hidden = youtubePlayer.hidden;
   youtubePlayer.hidden = !hidden;
-  youtubeButton.textContent = hidden ? "Nascondi player YouTube" : "▶ Hey Brother · YouTube";
+  youtubeButton.textContent = hidden ? "Hide YouTube player" : "▶ Hey Brother · YouTube";
 });
 
 document.querySelectorAll("[data-quote-video]").forEach((button) => {
@@ -66,7 +66,7 @@ document.querySelectorAll("[data-quote-video]").forEach((button) => {
     const isLoaded = Boolean(player.querySelector("iframe"));
     if (!isLoaded) {
       const iframe = document.createElement("iframe");
-      iframe.title = "Scena italiana della citazione";
+      iframe.title = "English scene of the quote";
       iframe.loading = "lazy";
       iframe.allow = "autoplay; encrypted-media; picture-in-picture";
       iframe.allowFullscreen = true;
@@ -76,7 +76,7 @@ document.querySelectorAll("[data-quote-video]").forEach((button) => {
     const hidden = player.hidden;
     player.hidden = !hidden;
     button.setAttribute("aria-expanded", String(hidden));
-    button.textContent = hidden ? "Nascondi la scena" : "▶ Guarda la scena italiana";
+    button.textContent = hidden ? "Hide scene" : "▶ Watch English scene";
   });
 });
 
@@ -88,7 +88,7 @@ document.querySelectorAll("[data-instagram-video]").forEach((button) => {
     const isLoaded = Boolean(player.querySelector("iframe"));
     if (!isLoaded) {
       const iframe = document.createElement("iframe");
-      iframe.title = "Frame Instagram dalla Caverna di Luca";
+      iframe.title = "Instagram frame from Luca's Cave";
       iframe.loading = "lazy";
       iframe.allow = "autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share";
       iframe.allowFullscreen = true;
@@ -98,17 +98,17 @@ document.querySelectorAll("[data-instagram-video]").forEach((button) => {
     const hidden = player.hidden;
     player.hidden = !hidden;
     button.setAttribute("aria-expanded", String(hidden));
-    button.textContent = hidden ? "Nascondi il frame Instagram" : "▣ Apri il frame Instagram";
+    button.textContent = hidden ? "Hide Instagram frame" : "▣ Open Instagram frame";
   });
 });
 
 const mottos = {
-  default: "Un buon ricercatore porta sempre un seed di riserva.",
-  data: "Il dataset è vasto. Il README è la tua mappa.",
-  wizard: "Niente magia: solo un ambiente pulito.",
-  training: "La suite di validazione è entrata nel suo training arc.",
-  focus: "Carica l'analisi. Controlla due volte le ipotesi.",
-  power: "Livello di potenza: riproducibile."
+  default: "A good researcher always carries a spare random seed.",
+  data: "The dataset is vast. The README is your map.",
+  wizard: "No magic: just a clean reproducible environment.",
+  training: "The validation test suite has entered its training arc.",
+  focus: "Charge the analysis. Double-check your hypotheses.",
+  power: "Power level: fully reproducible."
 };
 const motto = document.querySelector("[data-motto]");
 
@@ -140,7 +140,7 @@ if ("serviceWorker" in navigator) {
         registration.update();
       })
       .catch((error) => {
-        console.warn("Registrazione del service worker non riuscita.", error);
+        console.warn("Service worker registration failed.", error);
       });
   });
 }
