@@ -108,7 +108,8 @@ const mottos = {
   wizard: "No magic: just a clean reproducible environment.",
   training: "The validation test suite has entered its training arc.",
   focus: "Charge the analysis. Double-check your hypotheses.",
-  power: "Power level: fully reproducible."
+  power: "Power level: fully reproducible.",
+  shield: "Strict spatial holdouts: zero leakage, zero regrets."
 };
 const motto = document.querySelector("[data-motto]");
 
