@@ -1,6 +1,6 @@
 <div align="center">
 
-# Caverna di Luca
+# Luca's Cave
 
 **Medicina · Bioinformatica · Oncologia computazionale**
 
@@ -38,7 +38,7 @@ sistema di supporto alle decisioni cliniche.
   open source.
 - **Missioni laterali** — easter egg interattivi originali, citazioni video
   italiane da Tolkien, Naruto, Disney, Harry Potter e Dragon Ball, più musica
-  opzionale nella Caverna di Luca.
+  opzionale in Luca's Cave.
 
 ## Technical profile
 
