@@ -5,7 +5,29 @@ inject();
 document.addEventListener("click", (event) => {
   const target = event.target.closest("[data-track]");
   if (target && target.dataset.track) {
-    track(target.dataset.track);
+    const trackLabel = target.dataset.track;
+
+    // 1. Google Analytics & Google Tag Manager DataLayer event
+    if (window.dataLayer) {
+      window.dataLayer.push({
+        event: "custom_click",
+        click_target: trackLabel,
+        click_url: target.href || "",
+        click_text: target.innerText ? target.innerText.trim().slice(0, 50) : ""
+      });
+    }
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "click_action", {
+        event_category: "Engagement",
+        event_label: trackLabel,
+        link_url: target.href || ""
+      });
+    }
+
+    // 2. Vercel Analytics (fallback)
+    try {
+      track(trackLabel);
+    } catch (e) {}
   }
 });
 
