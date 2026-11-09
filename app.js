@@ -169,8 +169,8 @@ if ("serviceWorker" in navigator) {
   dismissBtn?.addEventListener("click", hideToast);
 
   async function forceUpdateAndReload() {
-    if (manualBtn) manualBtn.textContent = "⏳ Aggiornamento...";
-    if (navManualBtn) navManualBtn.textContent = "⏳ Aggiornamento...";
+    if (manualBtn) manualBtn.textContent = "⏳ Updating...";
+    if (navManualBtn) navManualBtn.textContent = "⏳ Updating...";
 
     try {
       if ("caches" in window) {
