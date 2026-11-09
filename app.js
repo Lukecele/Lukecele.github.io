@@ -83,7 +83,7 @@ document.querySelectorAll("[data-quote-video]").forEach((button) => {
       iframe.loading = "lazy";
       iframe.allow = "autoplay; encrypted-media; picture-in-picture";
       iframe.allowFullscreen = true;
-      iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1&playsinline=1`;
+      iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?rel=0&modestbranding=1&playsinline=1&enablejsapi=1`;
       player.append(iframe);
     }
     const hidden = player.hidden;
