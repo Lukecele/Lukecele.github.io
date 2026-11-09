@@ -1,4 +1,4 @@
-const CACHE = "lukecele-research-v46";
+const CACHE = "lukecele-research-v47";
 const CORE = [
   "/",
   "/index.html",
@@ -9,6 +9,7 @@ const CORE = [
   "/manifest.webmanifest",
   "/icon-192.png",
   "/icon-512.png",
+  "/social-preview.png",
   "/og-card-luca.png",
   "/profile-photo.png",
   "/reel-3d-poster.jpg"
