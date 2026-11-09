@@ -18,6 +18,20 @@ document.addEventListener("click", (event) => {
         event_label: trackLabel,
         link_url: target.href || ""
       });
+
+      // Eventi chiave specifici per Google Analytics
+      if (trackLabel.includes("cv")) {
+        window.gtag("event", "cv_download", { method: "direct_link" });
+      }
+      if (trackLabel.includes("doi") || trackLabel.includes("paper")) {
+        window.gtag("event", "paper_read", { paper: trackLabel });
+      }
+      if (trackLabel.includes("star")) {
+        window.gtag("event", "github_star_intent", { repo: trackLabel });
+      }
+      if (trackLabel.includes("simulator") || trackLabel.includes("3d") || trackLabel.includes("lab")) {
+        window.gtag("event", "simulation_open", { feature: trackLabel });
+      }
     }
   }
 });
