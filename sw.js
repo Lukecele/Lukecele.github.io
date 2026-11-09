@@ -1,11 +1,11 @@
-const CACHE = "lukecele-research-v42";
+const CACHE = "lukecele-research-v43";
 const CORE = [
   "/",
   "/index.html",
   "/privacy.html",
   "/cookie-policy.html",
-  "/styles.css?v=17",
-  "/app.bundle.js?v=4",
+  "/styles.css?v=18",
+  "/app.bundle.js?v=5",
   "/manifest.webmanifest",
   "/icon-192.png",
   "/icon-512.png",
@@ -26,6 +26,21 @@ self.addEventListener("activate", (event) => {
     )
   );
   self.clients.claim();
+});
+
+self.addEventListener("message", (event) => {
+  if (event.data) {
+    if (event.data.action === "skipWaiting") {
+      self.skipWaiting();
+    }
+    if (event.data.action === "clearCache") {
+      event.waitUntil(
+        caches.keys().then((keys) =>
+          Promise.all(keys.map((key) => caches.delete(key)))
+        )
+      );
+    }
+  }
 });
 
 self.addEventListener("fetch", (event) => {

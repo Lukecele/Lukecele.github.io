@@ -125,6 +125,7 @@ document.querySelector("[data-quest]")?.addEventListener("click", () => {
   document.querySelector(".quest-section")?.scrollIntoView({ behavior: "smooth" });
 });
 
+// --- PWA Live Update System & Cache Buster ---
 if ("serviceWorker" in navigator) {
   let refreshing = false;
   navigator.serviceWorker.addEventListener("controllerchange", () => {
@@ -134,11 +135,95 @@ if ("serviceWorker" in navigator) {
     }
   });
 
+  const toast = document.querySelector("#pwa-update-toast");
+  const updateBtn = document.querySelector("#pwa-update-btn");
+  const dismissBtn = document.querySelector("#pwa-dismiss-btn");
+  const manualBtn = document.querySelector("#pwa-manual-check");
+  const navManualBtn = document.querySelector("#pwa-nav-check");
+
+  let waitingWorker = null;
+
+  function showToast(worker) {
+    waitingWorker = worker;
+    if (toast) {
+      toast.hidden = false;
+      requestAnimationFrame(() => toast.classList.add("visible"));
+    }
+  }
+
+  function hideToast() {
+    if (toast) {
+      toast.classList.remove("visible");
+      setTimeout(() => { toast.hidden = true; }, 350);
+    }
+  }
+
+  updateBtn?.addEventListener("click", () => {
+    if (waitingWorker) {
+      waitingWorker.postMessage({ action: "skipWaiting" });
+    } else {
+      forceUpdateAndReload();
+    }
+  });
+
+  dismissBtn?.addEventListener("click", hideToast);
+
+  async function forceUpdateAndReload() {
+    if (manualBtn) manualBtn.textContent = "⏳ Aggiornamento...";
+    if (navManualBtn) navManualBtn.textContent = "⏳ Aggiornamento...";
+
+    try {
+      if ("caches" in window) {
+        const cacheNames = await caches.keys();
+        await Promise.all(cacheNames.map((name) => caches.delete(name)));
+      }
+      if (navigator.serviceWorker.controller) {
+        navigator.serviceWorker.controller.postMessage({ action: "clearCache" });
+        navigator.serviceWorker.controller.postMessage({ action: "skipWaiting" });
+      }
+      const registrations = await navigator.serviceWorker.getRegistrations();
+      for (const reg of registrations) {
+        await reg.update();
+      }
+    } catch (err) {
+      console.warn("Manual PWA refresh error:", err);
+    }
+
+    setTimeout(() => {
+      window.location.reload();
+    }, 300);
+  }
+
+  manualBtn?.addEventListener("click", forceUpdateAndReload);
+  navManualBtn?.addEventListener("click", forceUpdateAndReload);
+
   window.addEventListener("load", () => {
     navigator.serviceWorker
       .register("/sw.js")
       .then((registration) => {
-        registration.update();
+        if (registration.waiting) {
+          showToast(registration.waiting);
+        }
+
+        registration.addEventListener("updatefound", () => {
+          const newWorker = registration.installing;
+          if (!newWorker) return;
+          newWorker.addEventListener("statechange", () => {
+            if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
+              showToast(newWorker);
+            }
+          });
+        });
+
+        document.addEventListener("visibilitychange", () => {
+          if (document.visibilityState === "visible") {
+            registration.update().catch(() => {});
+          }
+        });
+
+        setInterval(() => {
+          registration.update().catch(() => {});
+        }, 10 * 60 * 1000);
       })
       .catch((error) => {
         console.warn("Service worker registration failed.", error);

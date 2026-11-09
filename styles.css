@@ -351,3 +351,158 @@ h3 { margin-bottom: 12px; font-size: clamp(1.25rem, 2vw, 1.7rem); line-height: 1
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
   .profile-photo-card { animation: none !important; }
 }
+
+/* PWA Live Update Toast */
+.pwa-update-toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  width: min(92vw, 420px);
+  background: rgba(13, 21, 38, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(96, 217, 197, 0.45);
+  border-radius: 16px;
+  padding: 14px 18px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), 0 0 30px rgba(96, 217, 197, 0.25);
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pwa-update-toast.visible {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.pwa-toast-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pwa-toast-icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.pwa-toast-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pwa-toast-text strong {
+  font-size: 0.92rem;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.pwa-toast-text span {
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.35;
+}
+
+.pwa-toast-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pwa-btn-update {
+  flex: 1;
+  background: linear-gradient(135deg, #60d9c5 0%, #3ba896 100%);
+  color: #04121a;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 0.82rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(96, 217, 197, 0.3);
+  transition: transform 0.15s ease, filter 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.pwa-btn-update:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.pwa-btn-update:active {
+  transform: translateY(0);
+}
+
+.pwa-btn-dismiss {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--muted);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.pwa-btn-dismiss:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+/* Footer & Nav Manual PWA Refresh Buttons */
+.pwa-refresh-btn {
+  background: transparent;
+  border: 1px solid rgba(96, 217, 197, 0.3);
+  color: var(--accent);
+  border-radius: 8px;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.pwa-refresh-btn:hover {
+  background: rgba(96, 217, 197, 0.15);
+  border-color: var(--accent);
+  box-shadow: 0 0 12px rgba(96, 217, 197, 0.25);
+}
+
+.pwa-nav-btn {
+  background: rgba(96, 217, 197, 0.1);
+  border: 1px solid rgba(96, 217, 197, 0.35);
+  color: var(--accent);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  margin-top: 6px;
+  width: 100%;
+  justify-content: center;
+}
+
+.pwa-nav-btn:hover {
+  background: rgba(96, 217, 197, 0.2);
+  border-color: var(--accent);
+}

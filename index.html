@@ -15,7 +15,7 @@
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/icon-192.png" />
-    <link rel="stylesheet" href="/styles.css?v=17" />
+    <link rel="stylesheet" href="/styles.css?v=18" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://lukecele-research.vercel.app/" />
     <meta property="og:title" content="Luca's Cave | Luca Celebrano" />
@@ -95,6 +95,7 @@
         <a href="https://lucacelebrano.substack.com/" target="_blank" rel="noopener">Substack ↗</a>
         <a href="#caverna">The Cave</a>
         <a href="#contact">Contact</a>
+        <button id="pwa-nav-check" class="pwa-nav-btn" type="button">🔄 Aggiorna PWA</button>
       </nav>
     </header>
 
@@ -495,6 +496,7 @@
           <a href="https://github.com/Lukecele">GitHub</a>
           <a href="https://lucacelebrano.substack.com/" target="_blank" rel="noopener noreferrer">Substack</a>
           <a href="https://orcid.org/0009-0007-0931-3555">ORCID</a>
+          <button id="pwa-manual-check" class="pwa-refresh-btn" type="button" title="Svuota cache e ricarica l'ultima versione dell'applicazione">🔄 Aggiorna PWA</button>
           <span>© <span id="year"></span> Luca Celebrano</span>
         </div>
       </div>
@@ -503,6 +505,21 @@
       </div>
     </footer>
 
-    <script src="/app.bundle.js?v=4" defer></script>
+    <!-- PWA Live Update Toast -->
+    <div id="pwa-update-toast" class="pwa-update-toast" hidden role="alert" aria-live="polite">
+      <div class="pwa-toast-content">
+        <span class="pwa-toast-icon">✨</span>
+        <div class="pwa-toast-text">
+          <strong>Nuova versione disponibile!</strong>
+          <span>Tocca per aggiornare La Caverna all'ultima build.</span>
+        </div>
+      </div>
+      <div class="pwa-toast-actions">
+        <button id="pwa-update-btn" class="pwa-btn-update" type="button">Aggiorna ora 🔄</button>
+        <button id="pwa-dismiss-btn" class="pwa-btn-dismiss" type="button" aria-label="Chiudi notifica">✕</button>
+      </div>
+    </div>
+
+    <script src="/app.bundle.js?v=5" defer></script>
   </body>
 </html>
