@@ -1,13 +1,9 @@
-import { inject, track } from "@vercel/analytics";
-
-inject();
-
 document.addEventListener("click", (event) => {
   const target = event.target.closest("[data-track]");
   if (target && target.dataset.track) {
     const trackLabel = target.dataset.track;
 
-    // 1. Google Analytics & Google Tag Manager DataLayer event
+    // Google Analytics (GA4) & Google Tag Manager (GTM) telemetry
     if (window.dataLayer) {
       window.dataLayer.push({
         event: "custom_click",
@@ -23,11 +19,6 @@ document.addEventListener("click", (event) => {
         link_url: target.href || ""
       });
     }
-
-    // 2. Vercel Analytics (fallback)
-    try {
-      track(trackLabel);
-    } catch (e) {}
   }
 });
 

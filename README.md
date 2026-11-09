@@ -4,12 +4,12 @@
 
 **Medicina · Bioinformatica · Oncologia computazionale**
 
-[![Live on Vercel](https://img.shields.io/badge/Live-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://lukecele-research.vercel.app/)
-[![PWA](https://img.shields.io/badge/PWA-Installable-60d9c5?style=for-the-badge)](https://lukecele-research.vercel.app/)
-[![GitHub](https://img.shields.io/badge/Source-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/Lukecele/lukecele-research)
+[![Website](https://img.shields.io/badge/🌐_Official_Site-lucacelebrano.me-60d9c5?style=for-the-badge)](https://lucacelebrano.me/)
+[![PWA](https://img.shields.io/badge/PWA-Installable-blue?style=for-the-badge)](https://lucacelebrano.me/)
+[![GitHub](https://img.shields.io/badge/Source-GitHub-181717?style=for-the-badge&logo=github)](https://github.com/Lukecele/Lukecele.github.io)
 
 <p>
-  <a href="https://lukecele-research.vercel.app/">Apri il portfolio di ricerca ↗</a>
+  <a href="https://lucacelebrano.me/">Apri il portfolio di ricerca (lucacelebrano.me) ↗</a>
 </p>
 
 </div>
@@ -47,13 +47,13 @@ This is a static site with a minimal npm bundle step:
 - semantic HTML;
 - custom responsive CSS;
 - small vanilla JavaScript layer bundled with esbuild;
-- Vercel Analytics through `@vercel/analytics`;
+- Google Analytics (GA4) & Google Tag Manager telemetry with custom event click streaming;
 - Web App Manifest and service worker;
 - Open Graph and Twitter metadata;
 - JSON-LD `Person` structured data;
 - `robots.txt` and XML sitemap;
 - generated PNG/SVG social and app icons;
-- no backend, database or tracking scripts.
+- no backend or database required.
 
 The interface is designed for keyboard navigation, reduced motion preferences,
 mobile screens and large desktop displays. Audio is opt-in and never starts
@@ -73,23 +73,18 @@ Open <http://localhost:4173>.
 
 ## Deployment
 
-The production deployment is connected to the `main` branch on Vercel:
+The production deployment is hosted statically on GitHub Pages with custom domain:
 
-**[lukecele-research.vercel.app](https://lukecele-research.vercel.app/)**
+**[lucacelebrano.me](https://lucacelebrano.me/)**
 
-To create your own Vercel deployment:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Lukecele/lukecele-research)
-
-Use the **Other** preset with `npm run build` as the build command and the
-repository root as the output directory.
+Continuous deployment triggers automatically on push to the `main` branch.
 
 ## Updating the portfolio
 
 Most content is in [`index.html`](./index.html), visual tokens and responsive
 rules are in [`styles.css`](./styles.css), and the interactive layer is in
 [`app.js`](./app.js). Update links and publication status there, then push to
-`main`; Vercel redeploys automatically.
+`main`; GitHub Pages redeploys automatically.
 
 ## License
 
