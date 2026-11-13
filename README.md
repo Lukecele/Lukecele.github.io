@@ -16,7 +16,7 @@
 
 ## Overview
 
-A lightweight, fast, and accessible research portfolio for **Luca Celebrano**, medical student and bioinformatics thesis researcher at **TIGEM** (Telethon Institute of Genetics and Medicine) and the **University of Naples Federico II**.
+A lightweight, fast, and accessible research portfolio for **Luca Celebrano**, MD candidate and computational oncology researcher at the **Department of Clinical Medicine and Surgery, Università degli Studi di Napoli Federico II**.
 
 It showcases current scientific manuscripts, open-source computational oncology systems, spatial transcriptomics and spatial omics tools, interactive Hugging Face spaces, and prior algorithmic engineering projects.
 
