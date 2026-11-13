@@ -29,7 +29,7 @@ document.addEventListener("click", (event) => {
       if (trackLabel.includes("star")) {
         window.gtag("event", "github_star_intent", { repo: trackLabel });
       }
-      if (trackLabel.includes("simulator") || trackLabel.includes("3d") || trackLabel.includes("lab")) {
+      if (trackLabel.includes("simulator") || trackLabel.includes("3d") || trackLabel.includes("lab") || trackLabel.includes("colab")) {
         window.gtag("event", "simulation_open", { feature: trackLabel });
       }
     }
