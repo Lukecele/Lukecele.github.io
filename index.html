@@ -23,12 +23,12 @@
     <meta name="description" content="Luca's Cave — The personal research space of Luca Celebrano: computational oncology, spatial multi-omics, biophysical modeling, and reproducible science." />
     <meta name="author" content="Luca Celebrano" />
     <meta name="google-site-verification" content="HvFfQGJ_KHo_uYvgyboXvWj8ItRsMDONQcbV3H0xE0w" />
-    <meta name="keywords" content="Luca's Cave, Luca Celebrano, bioinformatics, computational oncology, spatial omics, TIGEM, reaction-diffusion, digital pathology, open source" />
+    <meta name="keywords" content="Luca's Cave, Luca Celebrano, bioinformatics, computational oncology, spatial omics, Federico II, reaction-diffusion, digital pathology, open source" />
     <link rel="canonical" href="https://lucacelebrano.me/" />
     <link rel="manifest" href="/manifest.webmanifest?v=3" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/icon-192.png?v=3" />
-    <link rel="stylesheet" href="/styles.css?v=19" />
+    <link rel="stylesheet" href="/styles.css?v=20" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://lucacelebrano.me/" />
     <meta property="og:title" content="Luca's Cave | Luca Celebrano" />
@@ -415,12 +415,28 @@
           <h2>Open tools, models, and analytical assays.</h2>
           <p class="section-intro">Open-source packages, repositories indexed on bio.tools, and curated into international reference directories.</p>
         </div>
+        <div class="terminal-install-box">
+          <div class="terminal-command-wrap">
+            <span class="terminal-prompt">$</span>
+            <code class="terminal-code">conda install -c bioconda spatial-continuum insitugame spatial-sanctuary</code>
+          </div>
+          <button type="button" class="terminal-copy-btn" data-copy="conda install -c bioconda spatial-continuum insitugame spatial-sanctuary" data-track="copy_bioconda_install" title="Copy conda command">
+            <span>📋</span> Copy
+          </button>
+        </div>
+
         <div class="system-grid">
           <a class="system-card system-card-large" href="https://github.com/Lukecele/spatial-continuum-oncology" target="_blank" rel="noopener noreferrer" data-track="system_spatial_continuum">
             <span class="system-badge">🧬 Standalone Python Package · nf-core Contributor</span>
             <span class="system-index">01</span>
             <span class="system-title">Spatial Continuum Oncology</span>
             <span class="system-description">Python package indexed on bio.tools and Bioconda for reaction-diffusion transport and Bessel K₀ sanctuaries. Standalone package; contributor to official nf-core genomic modules (abra2).</span>
+            <div class="system-tags">
+              <span class="system-tag">Python</span>
+              <span class="system-tag">Bioconda</span>
+              <span class="system-tag">bio.tools</span>
+              <span class="system-tag">nf-core</span>
+            </div>
             <span class="system-arrow" aria-hidden="true">↗</span>
           </a>
           <a class="system-card" href="https://github.com/Lukecele/spatial-architecture-osimertinib" target="_blank" rel="noopener noreferrer" data-track="system_spatial_architecture">
@@ -428,18 +444,37 @@
             <span class="system-index">02</span>
             <span class="system-title">Spatial Architecture</span>
             <span class="system-description">Visium HD spatial analysis of subcellular transport boundaries in EGFR-mutant NSCLC. Officially curated in awesome-single-cell.</span>
+            <div class="system-tags">
+              <span class="system-tag">Visium HD</span>
+              <span class="system-tag">awesome-single-cell</span>
+              <span class="system-tag">Spatial Omics</span>
+            </div>
             <span class="system-arrow" aria-hidden="true">↗</span>
           </a>
           <a class="system-card" href="https://github.com/Lukecele/spatial-game-assay" target="_blank" rel="noopener noreferrer" data-track="system_insitugame">
+            <span class="system-badge">🎲 Evolutionary Game Assay · bio.tools</span>
             <span class="system-index">03</span>
             <span class="system-title">InSituGame</span>
-            <span class="system-description">Spatial evolutionary game-theoretic assay for subclonal payoff matrices and adaptive therapy dynamics.</span>
+            <span class="system-description">Spatial evolutionary game-theoretic assay for subclonal payoff matrices, Nash attractors, and adaptive therapy dynamics in solid tumors.</span>
+            <div class="system-tags">
+              <span class="system-tag">Game Theory</span>
+              <span class="system-tag">Bioconda</span>
+              <span class="system-tag">bio.tools</span>
+              <span class="system-tag">Python</span>
+            </div>
             <span class="system-arrow" aria-hidden="true">↗</span>
           </a>
           <a class="system-card" href="https://github.com/Lukecele/spatial-he-vision-study4" target="_blank" rel="noopener noreferrer" data-track="system_insituvision">
+            <span class="system-badge">👁️ Digital Pathology AI · Open Source</span>
             <span class="system-index">04</span>
             <span class="system-title">InSituVision-AI</span>
-            <span class="system-description">Digital pathology research platform with Attention-MIL over routine H&E whole-slide images.</span>
+            <span class="system-description">Digital pathology research platform with Attention-MIL deep learning for spatial vascular decoupling on routine H&amp;E whole-slide images.</span>
+            <div class="system-tags">
+              <span class="system-tag">Attention-MIL</span>
+              <span class="system-tag">PyTorch</span>
+              <span class="system-tag">H&amp;E Vision</span>
+              <span class="system-tag">Pathology</span>
+            </div>
             <span class="system-arrow" aria-hidden="true">↗</span>
           </a>
           <a class="system-card" href="https://github.com/Lukecele/inflammatory-onco-physics" target="_blank" rel="noopener noreferrer" data-track="system_inflammatory_onco_physics">
@@ -447,13 +482,25 @@
             <span class="system-index">05</span>
             <span class="system-title">Inflammatory Onco-Physics</span>
             <span class="system-description">Analytical Krogh-Bessel K₀ diffusion solver, Volterra hereditary immune functionals, and complete-case survival analysis across 3,461 clinical cases (11 cohorts).</span>
+            <div class="system-tags">
+              <span class="system-tag">Reaction-Diffusion</span>
+              <span class="system-tag">Bessel K₀</span>
+              <span class="system-tag">N=3,461</span>
+              <span class="system-tag">Zenodo DOI</span>
+            </div>
             <span class="system-arrow" aria-hidden="true">↗</span>
           </a>
           <a class="system-card" href="https://cardio-thoracic-medterminal.vercel.app/" target="_blank" rel="noopener noreferrer" data-track="system_medterminal">
+            <span class="system-badge">🩺 Clinical Education · 3D WebGL</span>
             <span class="system-index">06</span>
             <span class="system-title">MedTerminal</span>
-            <span class="system-description">Interactive 3D anatomy, ECG simulation, and active recall training for medical education.</span>
-            <span class="system-quote">“He cannot see where the heart leads when the sun is down and the moon is dead.”</span>
+            <span class="system-description">Interactive cardiology &amp; pulmonology learning platform: real-time 3D cardiac anatomy, 12-lead ECG telemetry simulation, and cardiac auscultation audio engine.</span>
+            <div class="system-tags">
+              <span class="system-tag">React</span>
+              <span class="system-tag">Three.js WebGL</span>
+              <span class="system-tag">ECG Engine</span>
+              <span class="system-tag">Tailwind</span>
+            </div>
             <span class="system-arrow" aria-hidden="true">↗</span>
           </a>
         </div>
@@ -592,6 +639,11 @@
               <button class="quote-video-button" type="button" data-quote-video="akrcYSLRluA" aria-expanded="false">▶ Watch English scene</button>
               <div class="quote-video" data-quote-player hidden></div>
             </article>
+            <article class="quote-card">
+              <div class="card-topline"><span>MedTerminal · Cardiology &amp; Physiology Lore</span><span class="pill">English</span></div>
+              <blockquote>“He cannot see where the heart leads when the sun is down and the moon is dead.”</blockquote>
+              <p class="quote-caption">The poetic tension between physiological mortality, clinical diagnostic limits, and relentless inquiry in the dark.</p>
+            </article>
           </div>
         </div>
       </section>
@@ -688,6 +740,6 @@
       </div>
     </div>
 
-    <script src="/app.bundle.js?v=5" defer></script>
+    <script src="/app.bundle.js?v=6" defer></script>
   </body>
 </html>

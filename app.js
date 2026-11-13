@@ -152,6 +152,26 @@ document.querySelector("[data-quest]")?.addEventListener("click", () => {
   document.querySelector(".quest-section")?.scrollIntoView({ behavior: "smooth" });
 });
 
+// --- Copy to Clipboard Handler ---
+document.querySelectorAll("[data-copy]").forEach((button) => {
+  button.addEventListener("click", async () => {
+    const textToCopy = button.dataset.copy;
+    if (!textToCopy) return;
+    try {
+      await navigator.clipboard.writeText(textToCopy);
+      const originalHTML = button.innerHTML;
+      button.innerHTML = "<span>✓</span> Copied!";
+      button.classList.add("copied");
+      setTimeout(() => {
+        button.innerHTML = originalHTML;
+        button.classList.remove("copied");
+      }, 2000);
+    } catch (err) {
+      console.warn("Clipboard copy failed:", err);
+    }
+  });
+});
+
 // --- PWA Live Update System & Cache Buster ---
 if ("serviceWorker" in navigator) {
   let refreshing = false;
