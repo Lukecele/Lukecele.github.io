@@ -32,6 +32,9 @@ document.addEventListener("click", (event) => {
       if (trackLabel.includes("simulator") || trackLabel.includes("3d") || trackLabel.includes("lab") || trackLabel.includes("colab")) {
         window.gtag("event", "simulation_open", { feature: trackLabel });
       }
+      if (trackLabel.includes("calculator")) {
+        window.gtag("event", "calculator_open", { feature: trackLabel });
+      }
     }
   }
 });
