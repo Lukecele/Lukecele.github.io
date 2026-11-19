@@ -17,7 +17,7 @@
 
 ## Overview
 
-A lightweight, fast, and accessible research portfolio for **Luca Celebrano**, MD candidate and computational oncology researcher at the **Department of Clinical Medicine and Surgery, Università degli Studi di Napoli Federico II**.
+A lightweight, fast, and accessible research portfolio for **Luca Celebrano**, Independent computational oncology researcher.
 
 It showcases current scientific manuscripts, open-source computational oncology systems, spatial transcriptomics and spatial omics tools, interactive Hugging Face spaces, and prior algorithmic engineering projects.
 
@@ -25,7 +25,7 @@ This portfolio is purposefully separated from institutional analysis pipelines a
 
 ## Sections
 
-- **Research & Publications** — Peer-reviewed manuscripts (including the submission for *Scientific Reports* and translational preprints on *Research Square*).
+- **Research & Publications** — Peer-reviewed manuscripts (including the submission for *Scientific Reports* and translational preprints on *Zenodo*).
 - **Research Systems** — HTBI Bedside Calculator, Spatial Continuum Oncology, InSituGame, InSituVision-AI, Spatial Oncology Master, and related analytical frameworks.
 - **Interactive Lab** — HTBI Streamlit Bedside Explorer, 2D/3D digital twins, biophysical reaction-diffusion simulators, and public benchmark datasets hosted on Hugging Face.
 - **Clinical Training** — MedTerminal Cardio-Thoracic emergency medicine interactive trainer.
